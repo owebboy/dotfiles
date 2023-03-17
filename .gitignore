@@ -1,0 +1,3 @@
+old
+.secrets/*
+!.secrets/.gitkeep
