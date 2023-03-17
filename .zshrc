@@ -5,8 +5,6 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-export FONTAWESOME_NPM_AUTH_TOKEN=4BCC6E7B-6991-4749-BB74-44E6F77DBEAB
-
 # If you come from bash you might have to change your $PATH.
 export PATH=~/.local/.bin:/usr/local/lib/ruby/gems/3.0.0/bin/:~/.gem/ruby/3.0.0/bin:$HOME/bin:/usr/local/bin:$PATH
 
