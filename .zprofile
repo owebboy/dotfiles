@@ -25,7 +25,12 @@ export GPG_TTY=$(tty)
 export HOMEBREW_NO_ENV_HINTS=1
 export HOMEBREW_GITHUB_API_TOKEN=$(cat ~/.secrets/github_pat)
 
+# homebrew curl
+export PATH="/opt/homebrew/opt/curl/bin:$PATH"
+
 # User configuration
 export MANPATH="/usr/local/man:$MANPATH"
 export LANG=en_US.UTF-8
 export EDITOR="nvim"
+
+export DOTFILES="$HOME/dotfiles"

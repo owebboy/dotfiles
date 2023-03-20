@@ -5,6 +5,8 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+
 # OMZ
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -12,9 +14,10 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 DISABLE_UPDATE_PROMPT="true"
 
 plugins=(
-  1password 
-  brew macos man 
-  git git-lfs gh
+  1password iterm2
+  brew macos man
+  common-aliases
+  git git-lfs gh git-prompt
   fzf
   node 
   colored-man-pages
@@ -23,6 +26,9 @@ plugins=(
   volta
   vscode
   ripgrep
+  rsync
+  tmux
+  virtualenv
   zsh-interactive-cd
   zsh-autosuggestions 
   zsh-history-substring-search
@@ -30,10 +36,9 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /usr/local/bin/terraform terraform
-
-
 [ -f ~/.fzf.zsh ] && source $HOME/.fzf.zsh
+
+source $DOTFILES/scripts/fzf-git.sh
+
 [[ ! -f ~/.p10k.zsh ]] || source $HOME/.p10k.zsh
 
