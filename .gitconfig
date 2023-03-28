@@ -1,33 +1,70 @@
 # This is Git's per-user configuration file.
 [user]
-# Please adapt and uncomment the following lines:
 	name = Oliver Pope
 	email = popeoliv@msu.edu
-	signingKey = false
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJv1w9YH/yPiPvgmzhqZkNowGiIYNNhkColPPJ3XGGPN
+
+[commit]
+	gpgsign = true
+
+[gpg]
+	program = /opt/homebrew/bin/gpg
+	format = ssh
+
 [init]
 	defaultBranch = main
-[diff]
-	tool = Kaleidoscope
-[difftool "Kaleidoscope"]
-	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
-[difftool]
-	prompt = false
-[merge]
-	tool = Kaleidoscope
-[mergetool "Kaleidoscope"]
-	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-	trustExitCode = true
-[mergetool]
-	prompt = false
-[commit]
-	gpgSign = false
-[gpg]
-	program = /usr/local/MacGPG2/bin/gpg2
-	format = ssh
+
+[alias]
+	ignore = "!gi() { curl -sL https://www.toptal.com/developers/gitignore/api/$@ ;}; gi"
+
+[credential]
+	helper = 
+	helper = --replace-all
+	helper = 
+	helper = /usr/local/share/gcm-core/git-credential-manager
+
+[color]
+	ui = true
+
 [pull]
-	rebase = false
+	rebase = true
+
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+	prompt = false
+
+[commit]
+	gpgSign = true
+
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+
+[core]
+    pager = delta
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true
+
+[merge]
+    conflictstyle = diff3
+
+	tool = Kaleidoscope
+[diff]
+    colorMoved = default
+	tool = Kaleidoscope
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[difftool]
+	prompt = false
+	trustExitCode = true
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustExitCode = true
+[mergetool]
+	prompt = false
