@@ -12,4 +12,6 @@ with pkgs; [
   tldr
   tree
   yq
+  aria
+  ffmpeg
 ]

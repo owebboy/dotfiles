@@ -6,7 +6,7 @@ with pkgs; [
   postman
   powershell
   tailscale
-  teams
+  transmission
   zoom-us
   (import (fetchTarball https://install.devenv.sh/latest)).default
 ]
