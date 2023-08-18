@@ -19,4 +19,6 @@ with pkgs; [
   nmap
   wakelan
   php
+  mkcert
+  mkvtoolnix
 ]
