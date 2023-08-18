@@ -57,7 +57,9 @@ in {
 
     home.stateVersion = "23.05";
     home.packages = import ./home-manager/packages.nix pkgs fenix;
-    home.sessionVariables = {EDITOR = "vim";};
+    home.sessionVariables = {
+      EDITOR = "nvim";
+    };
 
     programs.atuin = import ./home-manager/atuin.nix;
     programs.direnv = import ./home-manager/direnv.nix;
@@ -70,5 +72,8 @@ in {
     programs.lsd.enable = true;
     programs.htop.enable = true;
     programs.vscode.enable = true;
+    programs.aria2.enable = true;
+    programs.bat.enable = true;
+    programs.jq.enable = true;
   };
 }

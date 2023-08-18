@@ -2,7 +2,11 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>AlternateMouseScroll</key>
+	<true/>
 	<key>AutoHideTmuxClientSession</key>
+	<true/>
+	<key>CloseBookmarksWindowAfterOpening</key>
 	<true/>
 	<key>Custom Color Presets</key>
 	<dict>
@@ -352,6 +356,10 @@
 	<string>23785E3B-96EC-4E76-84F4-46BAA008C523</string>
 	<key>EnableAPIServer</key>
 	<true/>
+	<key>FocusFollowsMouse</key>
+	<false/>
+	<key>FocusOnRightOrMiddleClick</key>
+	<false/>
 	<key>HapticFeedbackForEsc</key>
 	<false/>
 	<key>HotkeyMigratedFromSingleToMulti</key>
@@ -700,6 +708,8 @@
 			<string>23785E3B-96EC-4E76-84F4-46BAA008C523</string>
 			<key>Horizontal Spacing</key>
 			<real>1</real>
+			<key>Icon</key>
+			<integer>1</integer>
 			<key>Idle Code</key>
 			<integer>0</integer>
 			<key>Jobs to Ignore</key>
@@ -1092,6 +1102,8 @@
 		</dict>
 	</array>
 	<key>OnlyWhenMoreTabs</key>
+	<false/>
+	<key>OpenBookmark</key>
 	<false/>
 	<key>PointerActions</key>
 	<dict>

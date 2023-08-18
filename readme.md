@@ -8,8 +8,10 @@
 4. [Install Homebrew](https://brew.sh/)
 5. [Install Nix-Darwin](https://github.com/LnL7/nix-darwin#installing)
 6. Substitute your system username for `oliver` in `darwin-configuration.nix` 
-7. Run `darwin-rebuild switch -I darwin-config=$HOME/.dotfiles/darwin-configuration.nix`
-
+7. Run:
+```bash
+NIXPKGS_ALLOW_UNFREE=1 darwin-rebuild switch -I darwin-config=$HOME/.dotfiles/darwin-configuration.nix
+```
 ## References
 
 - nix-darwin configuration: https://daiderd.com/nix-darwin/manual/index.html
