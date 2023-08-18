@@ -356,6 +356,10 @@
 	<string>23785E3B-96EC-4E76-84F4-46BAA008C523</string>
 	<key>EnableAPIServer</key>
 	<true/>
+	<key>FocusFollowsMouse</key>
+	<false/>
+	<key>FocusOnRightOrMiddleClick</key>
+	<false/>
 	<key>HapticFeedbackForEsc</key>
 	<false/>
 	<key>HotkeyMigratedFromSingleToMulti</key>
@@ -704,6 +708,8 @@
 			<string>23785E3B-96EC-4E76-84F4-46BAA008C523</string>
 			<key>Horizontal Spacing</key>
 			<real>1</real>
+			<key>Icon</key>
+			<integer>1</integer>
 			<key>Idle Code</key>
 			<integer>0</integer>
 			<key>Jobs to Ignore</key>
