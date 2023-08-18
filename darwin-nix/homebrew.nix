@@ -8,7 +8,6 @@
     "homebrew/services"
   ];
   casks = [
-    "1password"
     "apparency"
     "betterzip"
     "element"

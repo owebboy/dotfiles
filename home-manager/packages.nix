@@ -14,4 +14,9 @@ with pkgs; [
   yq
   aria
   ffmpeg
+  broot
+  bandwhich
+  nmap
+  wakelan
+  php
 ]
