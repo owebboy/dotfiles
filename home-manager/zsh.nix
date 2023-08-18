@@ -18,9 +18,6 @@
     };
   };
   shellAliases = {
-    chgrp = "chgrp --preserve-root";
-    chmod = "chmod --preserve-root";
-    chown = "chown --preserve-root";
     cls = "clear";
     cpv = "rsync -ah --info=progress2";
     df = "df -h";

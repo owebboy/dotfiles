@@ -12,7 +12,8 @@
     userEmail = "popeoliv@msu.edu";
     userName = "Oliver Pope";
     extraConfig = {
-      pull = {rebase = true;};
+      pull.rebase = true;
+      init.defaultBranch = "main";
     };
     package = pkgs.gitAndTools.gitFull;
     lfs.enable = true;
