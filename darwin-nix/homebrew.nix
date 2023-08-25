@@ -6,7 +6,17 @@
     "homebrew/cask-fonts"
     "homebrew/cask-versions"
     "homebrew/services"
+    "mongodb/brew"
   ];
+
+  brews = [
+    {
+      name = "mongodb-community";
+      restart_service = true;
+      start_service = true;
+    }
+  ];
+
   casks = [
     "apparency"
     "betterzip"
