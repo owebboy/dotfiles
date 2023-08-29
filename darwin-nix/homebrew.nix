@@ -18,6 +18,9 @@
   ];
 
   casks = [
+    "angry-ip-scanner"
+    "sublime-text"
+    "sublime-merge"
     "apparency"
     "betterzip"
     "element"

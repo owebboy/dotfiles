@@ -1,6 +1,7 @@
 {
   enable = true;
   plugins = {
+    emmet.enable = true;
     lightline.enable = true;
     lsp.enable = true;
     lsp.servers = {
@@ -29,8 +30,10 @@
     neo-tree = {
       enable = true;
       enableGitStatus = true;
+      enableModifiedMarkers = true;
     };
     rust-tools.enable = true;
+    treesitter.enable = true;
   };
   colorschemes.gruvbox.enable = true;
   options = {
