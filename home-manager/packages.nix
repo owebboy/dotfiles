@@ -21,4 +21,5 @@ with pkgs; [
   php
   mkcert
   mkvtoolnix
+  lynx
 ]
