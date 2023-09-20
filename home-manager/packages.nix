@@ -22,4 +22,7 @@ with pkgs; [
   mkcert
   mkvtoolnix
   lynx
+  rarcrack
+  go
+  mkclean
 ]
