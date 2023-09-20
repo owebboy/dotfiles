@@ -24,5 +24,4 @@ with pkgs; [
   lynx
   rarcrack
   go
-  mkclean
 ]

@@ -15,6 +15,8 @@
       restart_service = true;
       start_service = true;
     }
+    "ykman"
+    "yubikey-personalization"
   ];
 
   casks = [
