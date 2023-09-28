@@ -59,5 +59,6 @@
     "vlc"
     "vmware-horizon-client"
     "whatsapp"
+    "cleanmymac"
   ];
 }
