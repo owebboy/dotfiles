@@ -1,6 +1,5 @@
-pkgs: fenix:
+pkgs:
 with pkgs; [
-  fenix.minimal.toolchain
   alejandra
   curl
   htop

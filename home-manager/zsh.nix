@@ -6,6 +6,7 @@
   history.extended = true;
   initExtra = ''
     source ~/.config/zsh/.p10k.zsh
+    source ~/.cargo/env
   '';
   prezto = {
     enable = true;

@@ -59,7 +59,7 @@ in {
     ];
 
     home.stateVersion = "23.05";
-    home.packages = import ./home-manager/packages.nix pkgs fenix;
+    home.packages = import ./home-manager/packages.nix pkgs;
     home.sessionVariables = {
       EDITOR = "nvim";
     };

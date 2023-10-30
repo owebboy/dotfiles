@@ -15,4 +15,16 @@
     hostname = "weblp5.bus.msu.edu";
     user = "popeoliv@campusad.msu.edu";
   };
+  matchBlocks."aitprd100a" = {
+    hostname = "aitprd100a.itservices.msu.edu";
+    user = "popeoliv";
+  };
+  matchBlocks."aitqa100a" = {
+    hostname = "aitqa100a.itservices.msu.edu";
+    user = "popeoliv";
+  };
+  matchBlocks."aittst100a" = {
+    hostname = "aittst100a.itservices.msu.edu";
+    user = "popeoliv";
+  };
 }
