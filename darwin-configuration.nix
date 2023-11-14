@@ -5,7 +5,10 @@
 }: let
   nixvim =
     import
-    (builtins.fetchGit {url = "https://github.com/nix-community/nixvim";});
+    (builtins.fetchGit {
+      url = "https://github.com/nix-community/nixvim";
+      ref = "nixos-23.05";
+    });
   fenix =
     import
     (fetchTarball "https://github.com/nix-community/fenix/archive/main.tar.gz")
