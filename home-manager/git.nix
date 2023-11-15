@@ -2,7 +2,7 @@
   programs.git.difftastic.enable = true;
   programs.gh = {
     enable = true;
-    enableGitCredentialHelper = true;
+    gitCredentialHelper.enable = true;
     settings.git_protocol = "ssh";
   };
   programs.git-cliff.enable = true;
