@@ -29,6 +29,6 @@
   };
   matchBlocks."broad-itsra" = {
     hostname = "broad-itsra.campusad.msu.edu";
-    user = "popeoliv";
+    user = "CAMPUSAD\\popeoliv";
   };
 }
