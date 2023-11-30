@@ -27,4 +27,8 @@
     hostname = "aittst100a.itservices.msu.edu";
     user = "popeoliv";
   };
+  matchBlocks."broad-itsra" = {
+    hostname = "broad-itsra.campusad.msu.edu";
+    user = "popeoliv";
+  };
 }
