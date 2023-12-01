@@ -31,4 +31,8 @@
     hostname = "broad-itsra.campusad.msu.edu";
     user = "CAMPUSAD\\popeoliv";
   };
+  matchBlocks."encoding-server" = {
+    hostname = "encoding-server.home.arpa";
+    user = "oliver";
+  };
 }
