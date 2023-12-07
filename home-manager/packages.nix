@@ -5,7 +5,7 @@ with pkgs; [
   htop
   jq
   nerdfonts
-  nodejs
+  volta
   python3
   rsync
   tldr

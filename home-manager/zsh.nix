@@ -7,6 +7,8 @@
   initExtra = ''
     source ~/.config/zsh/.p10k.zsh
     source ~/.cargo/env
+    export VOLTA_HOME="$HOME/.volta"
+    export PATH="$VOLTA_HOME/bin:$PATH"
   '';
   prezto = {
     enable = true;
