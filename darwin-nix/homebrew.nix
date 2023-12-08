@@ -55,10 +55,10 @@
     "suspicious-package"
     "telegram"
     "tower"
+    "postman"
     "transmit"
     "vlc"
     "vmware-horizon-client"
-    "whatsapp"
     "cleanmymac"
   ];
 }

@@ -16,7 +16,6 @@ with pkgs; [
   broot
   bandwhich
   nmap
-  wakelan
   php
   mkcert
   mkvtoolnix
