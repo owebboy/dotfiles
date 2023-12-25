@@ -13,7 +13,6 @@ with pkgs; [
   yq
   aria
   ffmpeg
-  broot
   bandwhich
   nmap
   php
@@ -22,4 +21,5 @@ with pkgs; [
   lynx
   rarcrack
   go
+  glances
 ]
