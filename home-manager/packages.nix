@@ -17,7 +17,7 @@ with pkgs; [
   nmap
   php
   mkcert
-  mkvtoolnix
+  # mkvtoolnix
   lynx
   rarcrack
   go
