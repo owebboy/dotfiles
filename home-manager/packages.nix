@@ -22,4 +22,5 @@ with pkgs; [
   rarcrack
   go
   glances
+  rclone
 ]
