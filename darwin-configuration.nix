@@ -7,7 +7,6 @@
     import
     (builtins.fetchGit {
       url = "https://github.com/nix-community/nixvim";
-      ref = "nixos-23.05";
     });
   fenix =
     import
@@ -64,11 +63,14 @@ in {
       EDITOR = "nvim";
     };
 
+    programs.awscli = import ./home-manager/awscli.nix;
     programs.atuin = import ./home-manager/atuin.nix;
     programs.direnv = import ./home-manager/direnv.nix;
     programs.fzf = import ./home-manager/fzf.nix;
     programs.ssh = import ./home-manager/ssh.nix;
     programs.zsh = import ./home-manager/zsh.nix;
+    programs.zoxide = import ./home-manager/zoxide.nix;
+    programs.tmux = import ./home-manager/tmux.nix;
 
     programs.home-manager.enable = true;
     programs.bottom.enable = true;

@@ -4,6 +4,8 @@
   enableCompletion = true;
   dotDir = ".config/zsh";
   history.extended = true;
+  autocd = true;
+
   initExtra = ''
     source ~/.config/zsh/.p10k.zsh
     source ~/.cargo/env
@@ -16,6 +18,7 @@
     terminal = {
     };
     tmux = {
+      autoStartLocal = true;
       autoStartRemote = true;
       itermIntegration = true;
     };

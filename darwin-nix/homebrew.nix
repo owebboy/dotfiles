@@ -20,11 +20,11 @@
   ];
 
   casks = [
+    "1password"
     "angry-ip-scanner"
-    "sublime-text"
-    "sublime-merge"
     "apparency"
     "betterzip"
+    "cleanmymac"
     "element"
     "elgato-control-center"
     "firefox"
@@ -33,6 +33,7 @@
     "keepassxc"
     "keka"
     "macs-fan-control"
+    "microsoft-auto-update"
     "microsoft-excel"
     "microsoft-outlook"
     "microsoft-powerpoint"
@@ -40,6 +41,7 @@
     "microsoft-word"
     "mongodb-compass"
     "mountain-duck"
+    "postman"
     "protonmail-bridge"
     "protonvpn"
     "qlcolorcode"
@@ -52,13 +54,15 @@
     "rectangle-pro"
     "signal"
     "sketch"
+    "sublime-merge"
+    "sublime-text"
     "suspicious-package"
+    "syncthing"
     "telegram"
     "tower"
-    "postman"
     "transmit"
     "vlc"
     "vmware-horizon-client"
-    "cleanmymac"
+    "whatsapp"
   ];
 }

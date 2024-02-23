@@ -1,26 +1,37 @@
 pkgs:
 with pkgs; [
   alejandra
-  curl
+  aria
+  bandwhich
+  brotli
+  curlFull
+  ffmpeg
+  glances
+  go
+  gzip
   htop
+  icu
   jq
+  json_c
+  libnghttp2
+  libuv
+  lynx
+  mkcert
+  mpdecimal
   nerdfonts
-  volta
+  nmap
+  nss_latest
+  openssl
+  php
   python3
+  rarcrack
+  rclone
   rsync
   tldr
   tree
+  unrtf
+  volta
+  xz
   yq
-  aria
-  ffmpeg
-  bandwhich
-  nmap
-  php
-  mkcert
-  # mkvtoolnix
-  lynx
-  rarcrack
-  go
-  glances
-  rclone
+  zenith
 ]
