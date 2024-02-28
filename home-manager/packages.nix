@@ -1,13 +1,11 @@
 pkgs:
 with pkgs; [
   alejandra
-  aria
   bandwhich
   brotli
   curlFull
   ffmpeg
   glances
-  go
   gzip
   htop
   icu

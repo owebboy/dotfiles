@@ -7,13 +7,10 @@
     import
     (builtins.fetchGit {
       url = "https://github.com/nix-community/nixvim";
+      ref="main";
     });
-  fenix =
-    import
-    (fetchTarball "https://github.com/nix-community/fenix/archive/main.tar.gz")
-    {};
 in {
-  imports = [<home-manager/nix-darwin> nixvim.nixDarwinModules.nixvim];
+  imports = [<home-manager/nix-darwin>];
 
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.extraOptions = ''
@@ -21,6 +18,8 @@ in {
   '';
 
   nix.settings.trusted-users = ["oliver"];
+  nix.package = pkgs.nixUnstable;
+
   services.nix-daemon.enable = true;
   security.pam.enableSudoTouchIdAuth = true;
   system.stateVersion = 4;
@@ -54,6 +53,7 @@ in {
 
   home-manager.users.oliver = {pkgs, ...}: {
     imports = [
+      nixvim.homeManagerModules.nixvim
       ./home-manager/git.nix
     ];
 
@@ -61,7 +61,11 @@ in {
     home.packages = import ./home-manager/packages.nix pkgs;
     home.sessionVariables = {
       EDITOR = "nvim";
+      GOPATH = "$HOME/go";
+      VOLTA_HOME="$HOME/.volta";
     };
+
+    programs.nixvim = import ./home-manager/vim.nix;
 
     programs.awscli = import ./home-manager/awscli.nix;
     programs.atuin = import ./home-manager/atuin.nix;
@@ -71,14 +75,19 @@ in {
     programs.zsh = import ./home-manager/zsh.nix;
     programs.zoxide = import ./home-manager/zoxide.nix;
     programs.tmux = import ./home-manager/tmux.nix;
+    programs.go = import ./home-manager/go.nix;
 
     programs.home-manager.enable = true;
     programs.bottom.enable = true;
     programs.lsd.enable = true;
+    programs.lsd.enableAliases = true;
     programs.htop.enable = true;
     programs.vscode.enable = true;
     programs.aria2.enable = true;
     programs.bat.enable = true;
     programs.jq.enable = true;
+    programs.less.enable = true;
+    programs.lesspipe.enable = true;
+
   };
 }

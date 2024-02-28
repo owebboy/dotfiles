@@ -16,11 +16,14 @@
       tsserver.enable = true;
     };
     nix.enable = true;
-    null-ls = {
+    none-ls = {
       enable = true;
       sources = {
         formatting.alejandra.enable = true;
-        formatting.prettier.enable = true;
+        formatting.prettier = {
+          disableTsServerFormatter = true;
+          enable = true;
+        };
         formatting.black.enable = true;
       };
     };

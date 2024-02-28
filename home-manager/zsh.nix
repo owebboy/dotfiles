@@ -9,8 +9,7 @@
   initExtra = ''
     source ~/.config/zsh/.p10k.zsh
     source ~/.cargo/env
-    export VOLTA_HOME="$HOME/.volta"
-    export PATH="$VOLTA_HOME/bin:$PATH"
+    export PATH="$VOLTA_HOME/bin:$HOME/go:$PATH"
   '';
   prezto = {
     enable = true;
@@ -30,7 +29,6 @@
     egrep = "egrep --color=auto";
     fgrep = "fgrep --color=auto";
     grep = "grep --color=auto";
-    ls = "lsd";
     poweroff = "sudo shutdown -h now";
     top = "htop";
     vi = "nvim";
