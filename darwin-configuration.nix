@@ -36,12 +36,9 @@ in {
     enableBashCompletion = true;
   };
 
-  programs.tmux = {
-    enable = true;
-    enableSensible = true;
-    enableVim = true;
-    enableMouse = true;
-  };
+  programs.tmux = import ./darwin-nix/tmux.nix;
+  programs.gnupg.agent = import ./darwin-nix/gnupg.nix;
+  programs.nix-index.enable = true;
 
   fonts.fontDir.enable = true;
   fonts.fonts = import ./darwin-nix/fonts.nix pkgs;
