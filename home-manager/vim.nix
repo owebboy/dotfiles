@@ -38,7 +38,6 @@
     rust-tools.enable = true;
     treesitter.enable = true;
   };
-  colorschemes.gruvbox.enable = true;
   options = {
     number = true; # Show line numbers
     relativenumber = true; # Show relative line numbers

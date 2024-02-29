@@ -7,20 +7,21 @@
     import
     (builtins.fetchGit {
       url = "https://github.com/nix-community/nixvim";
-      ref="main";
+      ref = "main";
     });
 in {
   imports = [<home-manager/nix-darwin>];
+
+  nix.settings.trusted-users = ["oliver"];
+  nix.package = pkgs.nixUnstable;
 
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.extraOptions = ''
     experimental-features = nix-command flakes
   '';
 
-  nix.settings.trusted-users = ["oliver"];
-  nix.package = pkgs.nixUnstable;
-
   services.nix-daemon.enable = true;
+
   security.pam.enableSudoTouchIdAuth = true;
   system.stateVersion = 4;
 
@@ -29,7 +30,6 @@ in {
   environment.systemPackages = import ./darwin-nix/packages.nix pkgs;
   environment.darwinConfig = "$HOME/.dotfiles/darwin-configuration.nix";
 
-  programs.nixvim = import ./darwin-nix/vim.nix;
   programs.zsh = {
     enable = true;
     enableCompletion = true;
@@ -51,19 +51,28 @@ in {
     home = "/Users/oliver";
   };
 
+  home-manager.useGlobalPkgs = true;
+  home-manager.useUserPackages = true;
+  home-manager.backupFileExtension = "bak";
+
   home-manager.users.oliver = {pkgs, ...}: {
     imports = [
       nixvim.homeManagerModules.nixvim
       ./home-manager/git.nix
     ];
 
-    home.stateVersion = "23.05";
+    home.stateVersion = "24.05";
     home.packages = import ./home-manager/packages.nix pkgs;
     home.sessionVariables = {
       EDITOR = "nvim";
       GOPATH = "$HOME/go";
-      VOLTA_HOME="$HOME/.volta";
+      VOLTA_HOME = "$HOME/.volta";
     };
+
+    # nix.package = pkgs.nixUnstable;
+    nix.gc.automatic = true;
+    programs.man.generateCaches = true;
+    targets.darwin.search = "DuckDuckGo";
 
     programs.nixvim = import ./home-manager/vim.nix;
 
@@ -88,6 +97,5 @@ in {
     programs.jq.enable = true;
     programs.less.enable = true;
     programs.lesspipe.enable = true;
-
   };
 }

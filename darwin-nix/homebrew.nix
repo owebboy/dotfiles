@@ -1,6 +1,7 @@
 {
   enable = true;
   global.brewfile = true;
+  onActivation.cleanup = "uninstall";
   taps = [
     "homebrew/bundle"
     "homebrew/cask-fonts"
