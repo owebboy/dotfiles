@@ -48,6 +48,14 @@ in {
     home = "/Users/oliver";
   };
 
+  system.activationScripts.postDarwinRebuild = {
+    text = ''
+      /usr/bin/xattr -d -r com.apple.quarantine ~/Library/QuickLook
+    '';
+    deps = [];
+  };
+  system.defaults = import ./darwin-nix/defaults.nix;
+
   home-manager.useGlobalPkgs = true;
   home-manager.useUserPackages = true;
   home-manager.backupFileExtension = "bak";
@@ -94,5 +102,6 @@ in {
     programs.jq.enable = true;
     programs.less.enable = true;
     programs.lesspipe.enable = true;
+    programs.gpg.enable = true;
   };
 }
