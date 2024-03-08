@@ -43,6 +43,7 @@
     "mongodb-compass"
     "protonmail-bridge"
     "protonvpn"
+    "prusaslicer"
     "qlcolorcode"
     "qlimagesize"
     "qlmarkdown"
