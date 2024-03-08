@@ -28,7 +28,7 @@
       };
     };
     notify.enable = true;
-    nvim-cmp.enable = true;
+    cmp.enable = true;
     nvim-colorizer.enable = true;
     neo-tree = {
       enable = true;
