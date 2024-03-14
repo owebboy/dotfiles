@@ -22,6 +22,7 @@
     }
     "ykman"
     "yubikey-personalization"
+    "nss"
   ];
 
   casks = [
