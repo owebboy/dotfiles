@@ -57,6 +57,7 @@
     "sketch"
     "sublime-merge"
     "sublime-text"
+    "syncthing"
     "suspicious-package"
     "telegram"
     "tower"
