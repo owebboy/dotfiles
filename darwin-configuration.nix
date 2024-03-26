@@ -7,13 +7,15 @@
     import
     (builtins.fetchGit {
       url = "https://github.com/nix-community/nixvim";
-      ref = "main";
+      ref = "nixos-23.11";
     });
 in {
-  imports = [<home-manager/nix-darwin>];
+  imports = [
+    nixvim.nixDarwinModules.nixvim
+    <home-manager/nix-darwin>
+  ];
 
   nix.settings.trusted-users = ["oliver"];
-  nix.package = pkgs.nixUnstable;
 
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.extraOptions = ''
@@ -35,6 +37,7 @@ in {
     enableCompletion = true;
     enableBashCompletion = true;
   };
+  programs.nixvim = import ./home-manager/vim.nix;
 
   programs.tmux = import ./darwin-nix/tmux.nix;
   programs.gnupg.agent = import ./darwin-nix/gnupg.nix;
@@ -62,11 +65,10 @@ in {
 
   home-manager.users.oliver = {pkgs, ...}: {
     imports = [
-      nixvim.homeManagerModules.nixvim
       ./home-manager/git.nix
     ];
 
-    home.stateVersion = "24.05";
+    home.stateVersion = "23.11";
     home.packages = import ./home-manager/packages.nix pkgs;
     home.sessionVariables = {
       EDITOR = "nvim";
@@ -74,12 +76,8 @@ in {
       VOLTA_HOME = "$HOME/.volta";
     };
 
-    # nix.package = pkgs.nixUnstable;
-    nix.gc.automatic = true;
     programs.man.generateCaches = true;
     targets.darwin.search = "DuckDuckGo";
-
-    programs.nixvim = import ./home-manager/vim.nix;
 
     programs.awscli = import ./home-manager/awscli.nix;
     programs.atuin = import ./home-manager/atuin.nix;

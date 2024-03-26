@@ -20,15 +20,11 @@
       enable = true;
       sources = {
         formatting.alejandra.enable = true;
-        formatting.prettier = {
-          disableTsServerFormatter = true;
-          enable = true;
-        };
         formatting.black.enable = true;
       };
     };
     notify.enable = true;
-    cmp.enable = true;
+    # cmp.enable = true;
     nvim-colorizer.enable = true;
     neo-tree = {
       enable = true;

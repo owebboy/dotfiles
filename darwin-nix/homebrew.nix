@@ -42,6 +42,7 @@
     "microsoft-teams"
     "microsoft-remote-desktop"
     "mongodb-compass"
+    "postman"
     "protonmail-bridge"
     "protonvpn"
     "prusaslicer"

@@ -21,6 +21,7 @@ with pkgs; [
   nss_latest
   openssl
   php
+  powershell
   python3
   rarcrack
   rclone
