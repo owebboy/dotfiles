@@ -23,6 +23,8 @@
     "ykman"
     "yubikey-personalization"
     "nss"
+    "asn"
+    "code-cli"
   ];
 
   casks = [

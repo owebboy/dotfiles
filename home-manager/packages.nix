@@ -33,4 +33,5 @@ with pkgs; [
   xz
   yq
   zenith
+  zsync
 ]
