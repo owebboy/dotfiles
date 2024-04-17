@@ -31,7 +31,6 @@
     "1password"
     "angry-ip-scanner"
     "apparency"
-    "betterzip"
     "cleanmymac"
     "element"
     "firefox"
