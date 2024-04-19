@@ -37,6 +37,7 @@
     "jetbrains-toolbox"
     "kaleidoscope"
     "keepassxc"
+    "keka"
     "microsoft-auto-update"
     "microsoft-excel"
     "microsoft-outlook"
