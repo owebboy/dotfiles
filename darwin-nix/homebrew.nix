@@ -25,6 +25,7 @@
     "nss"
     "asn"
     "code-cli"
+    "homebrew/core/mongosh"
   ];
 
   casks = [
