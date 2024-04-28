@@ -35,4 +35,12 @@
     hostname = "encoding-server.home.arpa";
     user = "oliver";
   };
+  matchBlocks."pve" = {
+    hostname = "pve.home.arpa";
+    user = "root";
+  };
+  matchBlocks."winpc" = {
+    hostname = "10.0.0.165";
+    user = "oliver";
+  };
 }
