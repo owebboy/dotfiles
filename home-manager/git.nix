@@ -27,6 +27,10 @@
       };
       diff.tool = "Kaleidoscope";
       feature.manyFiles = true;
+      user.signingkey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJv1w9YH/yPiPvgmzhqZkNowGiIYNNhkColPPJ3XGGPN";
+      gpg.format = "ssh";
+      gpg.ssh.program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign";
+      commit.gpgsign = true;
     };
     package = pkgs.gitAndTools.gitFull;
     lfs.enable = true;
