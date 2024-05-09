@@ -5,4 +5,5 @@ with pkgs; [
   fira-code-symbols
   fira-mono
   iosevka
+  inter
 ]
