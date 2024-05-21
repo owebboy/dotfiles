@@ -71,6 +71,7 @@ in {
     home.stateVersion = "23.11";
     home.packages = import ./home-manager/packages.nix pkgs;
     home.sessionVariables = {
+      PATH = "$HOME/bin:$PATH";
       EDITOR = "nvim";
       GOPATH = "$HOME/go";
       VOLTA_HOME = "$HOME/.volta";
