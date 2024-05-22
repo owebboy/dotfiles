@@ -43,6 +43,7 @@
     "kaleidoscope"
     "keepassxc"
     "keka"
+    "mactex"
     "microsoft-auto-update"
     "microsoft-excel"
     "microsoft-outlook"
