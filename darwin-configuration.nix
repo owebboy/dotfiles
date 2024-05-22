@@ -23,6 +23,7 @@ in {
   '';
 
   services.nix-daemon.enable = true;
+  services.nix-daemon.enableSocketListener = true;
 
   security.pam.enableSudoTouchIdAuth = true;
   system.stateVersion = 4;
@@ -95,7 +96,6 @@ in {
     programs.lsd.enable = true;
     programs.lsd.enableAliases = true;
     programs.htop.enable = true;
-    # programs.vscode.enable = true;
     programs.aria2.enable = true;
     programs.bat.enable = true;
     programs.jq.enable = true;
