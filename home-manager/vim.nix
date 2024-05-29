@@ -1,5 +1,6 @@
 {
   enable = true;
+  defaultEditor = true;
   plugins = {
     emmet.enable = true;
     lightline.enable = true;
@@ -38,5 +39,6 @@
     number = true; # Show line numbers
     relativenumber = true; # Show relative line numbers
     shiftwidth = 2; # Tab width should be 2
+    termguicolors = true;
   };
 }

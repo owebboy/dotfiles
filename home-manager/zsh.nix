@@ -5,7 +5,6 @@
   dotDir = ".config/zsh";
   history.extended = true;
   autocd = true;
-
   initExtra = ''
     source ~/.config/zsh/.p10k.zsh
     source ~/.cargo/env
@@ -15,6 +14,7 @@
     enable = true;
     prompt.theme = "powerlevel10k";
     terminal = {
+      autoTitle = true;
     };
     tmux = {
       autoStartLocal = true;
@@ -31,7 +31,6 @@
     grep = "grep --color=auto";
     poweroff = "sudo shutdown -h now";
     top = "htop";
-    vi = "nvim";
     vim = "nvim";
     wget = "wget -c";
   };

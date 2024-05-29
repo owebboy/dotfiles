@@ -11,7 +11,6 @@
     });
 in {
   imports = [
-    nixvim.nixDarwinModules.nixvim
     <home-manager/nix-darwin>
   ];
 
@@ -38,7 +37,6 @@ in {
     enableCompletion = true;
     enableBashCompletion = true;
   };
-  programs.nixvim = import ./home-manager/vim.nix;
 
   programs.tmux = import ./darwin-nix/tmux.nix;
   programs.gnupg.agent = import ./darwin-nix/gnupg.nix;
@@ -67,7 +65,8 @@ in {
   home-manager.users.oliver = {pkgs, ...}: {
     imports = [
       ./home-manager/git.nix
-    ];
+      nixvim.homeManagerModules.nixvim
+    ]; 
 
     home.stateVersion = "23.11";
     home.packages = import ./home-manager/packages.nix pkgs;
@@ -76,6 +75,7 @@ in {
       EDITOR = "nvim";
       GOPATH = "$HOME/go";
       VOLTA_HOME = "$HOME/.volta";
+      MANPAGER = "nvim +Man!";
     };
 
     programs.man.generateCaches = true;
@@ -90,6 +90,7 @@ in {
     programs.zoxide = import ./home-manager/zoxide.nix;
     programs.tmux = import ./home-manager/tmux.nix;
     programs.go = import ./home-manager/go.nix;
+    programs.nixvim = import ./home-manager/vim.nix;
 
     programs.home-manager.enable = true;
     programs.bottom.enable = true;
