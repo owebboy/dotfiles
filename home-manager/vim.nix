@@ -47,6 +47,7 @@ pkgs: {
     shiftwidth = 2; # Tab width should be 2
     termguicolors = true;
   };
-  colorschemes.base16.enable = true;
-  colorschemes.base16.colorscheme = "monokai";
+  colorschemes.tokyonight.enable = true;
+  colorschemes.tokyonight.style = "night";
+  colorschemes.tokyonight.transparent = true;
 }
