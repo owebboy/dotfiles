@@ -1,6 +1,10 @@
-{
+pkgs: {
   enable = true;
   defaultEditor = true;
+  extraPlugins = with pkgs.vimPlugins; [
+    zoxide-vim
+    fzfWrapper
+  ];
   plugins = {
     emmet.enable = true;
     lightline.enable = true;
@@ -34,6 +38,8 @@
     };
     rust-tools.enable = true;
     treesitter.enable = true;
+    trouble.enable = true;
+    
   };
   options = {
     number = true; # Show line numbers
@@ -41,4 +47,6 @@
     shiftwidth = 2; # Tab width should be 2
     termguicolors = true;
   };
+  colorschemes.base16.enable = true;
+  colorschemes.base16.colorscheme = "monokai";
 }

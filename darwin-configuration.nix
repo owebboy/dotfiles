@@ -90,7 +90,7 @@ in {
     programs.zoxide = import ./home-manager/zoxide.nix;
     programs.tmux = import ./home-manager/tmux.nix;
     programs.go = import ./home-manager/go.nix;
-    programs.nixvim = import ./home-manager/vim.nix;
+    programs.nixvim = import ./home-manager/vim.nix pkgs;
 
     programs.home-manager.enable = true;
     programs.bottom.enable = true;
