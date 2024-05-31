@@ -6,13 +6,18 @@
   history.extended = true;
   autocd = true;
   initExtra = ''
-    source ~/.config/zsh/.p10k.zsh
-    source ~/.cargo/env
-    export PATH="$VOLTA_HOME/bin:$HOME/go:$PATH"
+    [[ ! -f ~/.cargo/env ]] ||source ~/.cargo/env
+    [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
   '';
   prezto = {
     enable = true;
-    prompt.theme = "powerlevel10k";
+    extraConfig = ''
+      zstyle ':prezto:module:editor' key-bindings 'vi'
+      zstyle ':prezto:module:prompt' theme 'powerlevel10k'
+    '';
+    prompt = {
+      theme = "powerlevel10k";
+    };
     terminal = {
       autoTitle = true;
     };
@@ -20,6 +25,9 @@
       autoStartLocal = true;
       autoStartRemote = true;
       itermIntegration = true;
+    };
+    editor = {
+      keymap = "vi";
     };
   };
   shellAliases = {

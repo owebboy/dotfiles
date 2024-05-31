@@ -36,10 +36,13 @@ in {
     enable = true;
     enableCompletion = true;
     enableBashCompletion = true;
+    enableFzfCompletion = true;
+    enableFzfGit = true;
+    enableFzfHistory = true;
+    enableSyntaxHighlighting = true;
   };
 
   programs.tmux = import ./darwin-nix/tmux.nix;
-  programs.gnupg.agent = import ./darwin-nix/gnupg.nix;
   programs.nix-index.enable = true;
 
   fonts.fontDir.enable = true;
@@ -66,16 +69,17 @@ in {
     imports = [
       ./home-manager/git.nix
       nixvim.homeManagerModules.nixvim
-    ]; 
+    ];
 
     home.stateVersion = "23.11";
     home.packages = import ./home-manager/packages.nix pkgs;
     home.sessionVariables = {
-      PATH = "$HOME/bin:$PATH";
+      PATH = "$HOME/bin:$VOLTA_HOME/bin:$HOME/go:$PATH";
       EDITOR = "nvim";
       GOPATH = "$HOME/go";
       VOLTA_HOME = "$HOME/.volta";
       MANPAGER = "nvim +Man!";
+      LESS = "-R";
     };
 
     programs.man.generateCaches = true;
@@ -102,6 +106,5 @@ in {
     programs.jq.enable = true;
     programs.less.enable = true;
     programs.lesspipe.enable = true;
-    programs.gpg.enable = true;
   };
 }
