@@ -8,7 +8,9 @@
   initExtra = ''
     [[ ! -f ~/.cargo/env ]] ||source ~/.cargo/env
     [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
+    export PATH="$VOLTA_HOME/bin:$PATH"
   '';
+
   prezto = {
     enable = true;
     extraConfig = ''

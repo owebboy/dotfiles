@@ -1,8 +1,4 @@
-{
-  config,
-  pkgs,
-  ...
-}: let
+{pkgs, ...}: let
   nixvim =
     import
     (builtins.fetchGit {
@@ -73,8 +69,11 @@ in {
 
     home.stateVersion = "23.11";
     home.packages = import ./home-manager/packages.nix pkgs;
+    home.sessionPath = [
+      "$HOME/bin"
+      "$HOME/go"
+    ];
     home.sessionVariables = {
-      PATH = "$HOME/bin:$VOLTA_HOME/bin:$HOME/go:$PATH";
       EDITOR = "nvim";
       GOPATH = "$HOME/go";
       VOLTA_HOME = "$HOME/.volta";
