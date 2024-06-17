@@ -41,8 +41,7 @@ in {
   programs.tmux = import ./darwin-nix/tmux.nix;
   programs.nix-index.enable = true;
 
-  fonts.fontDir.enable = true;
-  fonts.fonts = import ./darwin-nix/fonts.nix pkgs;
+  fonts.packages = import ./darwin-nix/fonts.nix pkgs;
 
   users.users.oliver = {
     name = "oliver";
