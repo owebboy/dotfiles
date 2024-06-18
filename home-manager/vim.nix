@@ -39,15 +39,18 @@ pkgs: {
     rust-tools.enable = true;
     treesitter.enable = true;
     trouble.enable = true;
-    
   };
-  options = {
+  opts = {
     number = true; # Show line numbers
     relativenumber = true; # Show relative line numbers
     shiftwidth = 2; # Tab width should be 2
     termguicolors = true;
   };
-  colorschemes.tokyonight.enable = true;
-  colorschemes.tokyonight.style = "night";
-  colorschemes.tokyonight.transparent = true;
+  colorschemes.tokyonight = {
+    settings = {
+      transparent = true;
+      style = "night";
+    };
+    enable = true;
+  };
 }

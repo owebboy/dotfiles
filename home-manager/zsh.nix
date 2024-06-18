@@ -1,6 +1,6 @@
 {
   enable = true;
-  enableAutosuggestions = true;
+  autosuggestion.enable = true;
   enableCompletion = true;
   dotDir = ".config/zsh";
   history.extended = true;
