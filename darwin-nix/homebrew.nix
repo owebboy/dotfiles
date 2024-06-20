@@ -20,12 +20,13 @@
       restart_service = true;
       start_service = true;
     }
-    "ykman"
-    "yubikey-personalization"
-    "nss"
     "asn"
     "code-cli"
     "homebrew/core/mongosh"
+    "mas"
+    "nss"
+    "ykman"
+    "yubikey-personalization"
   ];
 
   casks = [
@@ -39,6 +40,7 @@
     "element"
     "firefox"
     "firefox@developer-edition"
+    "iterm2"
     "jetbrains-toolbox"
     "kaleidoscope"
     "keepassxc"
@@ -67,7 +69,6 @@
     "signal"
     "sketch"
     "suspicious-package"
-    "syncthing"
     "telegram"
     "tower"
     "transmit"

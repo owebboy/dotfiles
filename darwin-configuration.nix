@@ -25,7 +25,6 @@ in {
 
   homebrew = import ./darwin-nix/homebrew.nix;
 
-  environment.systemPackages = import ./darwin-nix/packages.nix pkgs;
   environment.darwinConfig = "$HOME/.dotfiles/darwin-configuration.nix";
 
   programs.zsh = {
