@@ -31,6 +31,7 @@
 
   casks = [
     "1password"
+    "1password-cli"
     "angry-ip-scanner"
     "apparency"
     "avifquicklook"
