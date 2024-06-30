@@ -46,4 +46,6 @@ with pkgs; [
   yq
   zenith
   nil
+  kubectl
+  btop
 ]

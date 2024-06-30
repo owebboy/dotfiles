@@ -8,10 +8,9 @@
   };
   taps = [
     "homebrew/bundle"
-    "homebrew/cask-fonts"
-    "homebrew/cask-versions"
     "homebrew/services"
     "mongodb/brew"
+    "microsoft/mssql-release"
   ];
 
   brews = [
@@ -21,10 +20,20 @@
       start_service = true;
     }
     "asn"
+    "brotli"
+    "c-ares"
     "code-cli"
-    "homebrew/core/mongosh"
+    "icu4c"
+    "libnghttp2"
+    "libuv"
     "mas"
+    "mongodb/brew/mongodb-community-shell"
+    "mongodb/brew/mongodb-database-tools"
+    "mongosh"
+    "node"
     "nss"
+    "podman"
+    "podman-compose"
     "ykman"
     "yubikey-personalization"
   ];
@@ -54,6 +63,7 @@
     "microsoft-teams"
     "microsoft-word"
     "mongodb-compass"
+    "podman-desktop"
     "postman"
     "protonmail-bridge"
     "protonvpn"
