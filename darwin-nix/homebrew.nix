@@ -10,7 +10,6 @@
     "homebrew/bundle"
     "homebrew/services"
     "mongodb/brew"
-    "microsoft/mssql-release"
   ];
 
   brews = [
@@ -48,6 +47,7 @@
     "brave-browser"
     "chatgpt"
     "element"
+    "eloston-chromium"
     "firefox"
     "firefox@developer-edition"
     "iterm2"

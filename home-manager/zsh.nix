@@ -43,5 +43,7 @@
     top = "htop";
     vim = "nvim";
     wget = "wget -c";
+    cd = "z";
+    tree = "ls --tree";
   };
 }
