@@ -9,6 +9,8 @@
     [[ ! -f ~/.cargo/env ]] ||source ~/.cargo/env
     [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
     export PATH="$VOLTA_HOME/bin:$PATH"
+    export BUN_INSTALL="$HOME/.bun"
+    export PATH="$BUN_INSTALL/bin:$PATH"
   '';
 
   prezto = {
