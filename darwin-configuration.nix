@@ -92,6 +92,7 @@ in {
     programs.tmux = import ./home-manager/tmux.nix;
     programs.go = import ./home-manager/go.nix;
     programs.nixvim = import ./home-manager/vim.nix pkgs;
+    programs.bun = import ./home-manager/bun.nix;
 
     programs.home-manager.enable = true;
     programs.bottom.enable = true;
