@@ -48,4 +48,6 @@ with pkgs; [
   nil
   kubectl
   btop
+  zlib-ng
+  brotli
 ]

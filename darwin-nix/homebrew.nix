@@ -45,7 +45,7 @@
     "avifquicklook"
     "balenaetcher"
     "brave-browser"
-    "chatgpt"
+    "raycast"
     "element"
     "eloston-chromium"
     "firefox"
@@ -84,5 +84,6 @@
     "tower"
     "transmit"
     "vlc"
+    "arc"
   ];
 }
