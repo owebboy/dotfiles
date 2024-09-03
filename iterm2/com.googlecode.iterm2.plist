@@ -3005,5 +3005,7 @@
 	<false/>
 	<key>disableMetalWhenUnplugged</key>
 	<false/>
+	<key>findMode_iTerm</key>
+	<integer>0</integer>
 </dict>
 </plist>
