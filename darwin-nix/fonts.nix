@@ -4,6 +4,7 @@ with pkgs; [
   fira-code
   fira-code-symbols
   fira-mono
-  iosevka
   inter
+  iosevka
+  overpass
 ]
