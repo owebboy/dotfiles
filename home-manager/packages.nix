@@ -20,19 +20,6 @@ with pkgs; [
   nmap
   nss_latest
   openssl
-  php83
-  php83Packages.composer
-  php83Packages.phan
-  php83Packages.phpstan
-  php83Extensions.zip
-  php83Extensions.xml
-  php83Extensions.bz2
-  php83Extensions.ast
-  php83Extensions.zstd
-  php83Extensions.zlib
-  php83Extensions.yaml
-  php83Extensions.curl
-  php83Extensions.posix
   powershell
   python3
   rarcrack
