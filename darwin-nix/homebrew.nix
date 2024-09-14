@@ -36,6 +36,7 @@
     "podman-compose"
     "ykman"
     "yubikey-personalization"
+    "oven-sh/bun/bun"
   ];
 
   casks = [
