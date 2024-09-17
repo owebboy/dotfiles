@@ -77,7 +77,6 @@
     "quicklook-json"
     "quicklookase"
     "raycast"
-    "rectangle-pro"
     "safari-technology-preview"
     "signal"
     "sketch"
