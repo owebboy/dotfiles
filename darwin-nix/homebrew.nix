@@ -10,6 +10,7 @@
     "homebrew/bundle"
     "homebrew/services"
     "mongodb/brew"
+    "oven-sh/bun"
   ];
 
   brews = [
