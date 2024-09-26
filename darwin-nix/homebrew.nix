@@ -85,5 +85,6 @@
     "tower"
     "transmit"
     "vlc"
+    "rectangle-pro"
   ];
 }
