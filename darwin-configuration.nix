@@ -37,6 +37,8 @@ in {
     enableSyntaxHighlighting = true;
   };
 
+  environment.pathsToLink = ["/share/zsh"];
+
   programs.tmux = import ./darwin-nix/tmux.nix;
   programs.nix-index.enable = true;
 
@@ -83,7 +85,6 @@ in {
     targets.darwin.search = "DuckDuckGo";
 
     programs.awscli = import ./home-manager/awscli.nix;
-    programs.atuin = import ./home-manager/atuin.nix;
     programs.direnv = import ./home-manager/direnv.nix;
     programs.fzf = import ./home-manager/fzf.nix;
     programs.ssh = import ./home-manager/ssh.nix;
@@ -92,6 +93,7 @@ in {
     programs.tmux = import ./home-manager/tmux.nix;
     programs.go = import ./home-manager/go.nix;
     programs.nixvim = import ./home-manager/vim.nix pkgs;
+    programs.nix-index = import ./home-manager/nix-index.nix;
 
     programs.home-manager.enable = true;
     programs.bottom.enable = true;
@@ -99,9 +101,10 @@ in {
     programs.lsd.enableAliases = true;
     programs.htop.enable = true;
     programs.aria2.enable = true;
-    programs.bat.enable = true;
     programs.jq.enable = true;
     programs.less.enable = true;
     programs.lesspipe.enable = true;
+    programs.bat.enable = true;
+    programs.lazygit.enable = true;
   };
 }

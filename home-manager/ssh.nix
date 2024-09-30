@@ -1,6 +1,8 @@
 {
   enable = true;
   compression = true;
+  controlPersist = "10m";
+
   matchBlocks."*" = {
     serverAliveInterval = 15;
     serverAliveCountMax = 1;
