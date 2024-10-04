@@ -17,7 +17,6 @@ in {
   home.homeDirectory = "/home/opope";
   home.stateVersion = "24.05";
 
-  fonts.fontconfig.enable = true;
   home.sessionVariables.NIXOS_OZONE_WL = "1";
   home.packages = import ./home-manager/packages.nix pkgs;
   home.sessionPath = [
