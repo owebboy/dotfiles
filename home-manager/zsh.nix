@@ -32,6 +32,7 @@
       keymap = "vi";
     };
   };
+  syntaxHighlighting.enable = true;
   shellAliases = {
     cls = "clear";
     cpv = "rsync -ah --info=progress2";
