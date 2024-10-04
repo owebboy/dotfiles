@@ -3,17 +3,22 @@
     import
     (builtins.fetchGit {
       url = "https://github.com/nix-community/nixvim";
-      ref = "nixos-24.05";
+      ref = "main";
     });
 in {
   imports = [
     ./home-manager/git.nix
     nixvim.homeManagerModules.nixvim
   ];
+
+  nix.gc.automatic = true;
+
   home.username = "opope";
   home.homeDirectory = "/home/opope";
   home.stateVersion = "24.05";
 
+  fonts.fontconfig.enable = true;
+  home.sessionVariables.NIXOS_OZONE_WL = "1";
   home.packages = import ./home-manager/packages.nix pkgs;
   home.sessionPath = [
     "$HOME/bin"
@@ -28,7 +33,6 @@ in {
   };
 
   programs.man.generateCaches = true;
-  targets.darwin.search = "DuckDuckGo";
 
   programs.awscli = import ./home-manager/awscli.nix;
   programs.direnv = import ./home-manager/direnv.nix;
@@ -52,14 +56,47 @@ in {
   programs.lesspipe.enable = true;
   programs.bat.enable = true;
   programs.lazygit.enable = true;
+  programs.alacritty.enable = true;
+  programs.kitty.enable = true;
 
   # wayland
   services.mako.enable = true;
   services.clipman.enable = true;
+  services.dunst.enable = true;
 
   programs.wofi.enable = true;
   programs.waybar.enable = true;
+  programs.hyprlock.enable = true;
 
-  wayland.windowManager.hyprland.enable = true;
-  wayland.windowManager.hyprland.systemd.enable = true;
+  services.hypridle.enable = true;
+
+  wayland.windowManager.hyprland = import ./home-manager/hyprland.nix;
+  programs.librewolf.enable = true;
+
+  home.pointerCursor = {
+    gtk.enable = true;
+    # x11.enable = true;
+    package = pkgs.bibata-cursors;
+    name = "Bibata-Modern-Classic";
+    size = 16;
+  };
+
+  gtk = {
+    enable = true;
+
+    theme = {
+      package = pkgs.flat-remix-gtk;
+      name = "Flat-Remix-GTK-Grey-Darkest";
+    };
+
+    iconTheme = {
+      package = pkgs.gnome.adwaita-icon-theme;
+      name = "Adwaita";
+    };
+
+    font = {
+      name = "Sans";
+      size = 11;
+    };
+  };
 }
