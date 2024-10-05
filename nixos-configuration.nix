@@ -4,7 +4,10 @@
   pkgs,
   ...
 }: {
-  imports = [<home-manager/nixos>];
+  imports = [
+    /etc/nixos/hardware-configuration.nix
+    <home-manager/nixos>
+  ];
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -12,9 +15,9 @@
   networking.networkmanager.enable = true;
   time.timeZone = "US/Michigan";
   i18n.defaultLocale = "en_US.UTF-8";
-  hardware.pulseaudio.enable = true;
   xdg.portal.wlr.enable = true;
   fonts.fontconfig.enable = true;
+  fileSystems.zfs.enable = true;
 
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
   environment.pathsToLink = ["/share/zsh"];
@@ -37,8 +40,6 @@
   home-manager.useUserPackages = true;
   home-manager.useGlobalPkgs = true;
   home-manager.users.opope = import ./home.nix pkgs;
-
-  systemd.sysusers.enable = true;
 
   system.copySystemConfiguration = true;
   system.stateVersion = "24.05";
