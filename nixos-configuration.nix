@@ -17,7 +17,6 @@
   i18n.defaultLocale = "en_US.UTF-8";
   xdg.portal.wlr.enable = true;
   fonts.fontconfig.enable = true;
-  fileSystems.zfs.enable = true;
 
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
   environment.pathsToLink = ["/share/zsh"];
