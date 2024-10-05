@@ -34,7 +34,7 @@
     extraGroups = ["wheel" "networkmanager"];
   };
 
-  home-manager = import ./home.nix {inherit pkgs;};
+  home-manager = import ./home.nix pkgs;
 
   systemd.sysusers.enable = true;
 
