@@ -34,7 +34,9 @@
     extraGroups = ["wheel" "networkmanager"];
   };
 
-  home-manager = import ./home.nix pkgs;
+  home-manager.useUserPackages = true;
+  home-manager.useGlobalPkgs = true;
+  home-manager.users.opope = import ./home.nix pkgs;
 
   systemd.sysusers.enable = true;
 
