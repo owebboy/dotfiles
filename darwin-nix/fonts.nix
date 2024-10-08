@@ -7,4 +7,5 @@ with pkgs; [
   inter
   iosevka
   overpass
+  (nerdfonts.override { fonts = [ "Iosevka" "IosevkaTerm" ]; })
 ]

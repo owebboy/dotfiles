@@ -3,14 +3,28 @@
     import
     (builtins.fetchGit {
       url = "https://github.com/nix-community/nixvim";
-      ref = "nixos-24.05";
+      ref = "main";
     });
 in {
   imports = [
     <home-manager/nix-darwin>
   ];
 
-  nix.settings.trusted-users = ["oliver"];
+  nix.settings = {
+    trusted-users = ["oliver"];
+    sandbox = false;
+    auto-optimise-store = true;
+    extra-sandbox-paths = ["/System/Library/Frameworks" "/System/Library/PrivateFrameworks" "/usr/lib" "/private/tmp" "/private/var/tmp" "/usr/bin/env"];
+  };
+
+  
+programs.fish.enable = true;
+environment.shells = with pkgs; [ fish ];
+users.users.oliver.shell = pkgs.fish;
+environment.loginShell = "${pkgs.fish}/bin/fish";
+
+  nix.optimise.automatic = true;
+  nix.gc.automatic = true;
 
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.extraOptions = ''
@@ -26,18 +40,13 @@ in {
   homebrew = import ./darwin-nix/homebrew.nix;
 
   environment.darwinConfig = "$HOME/.dotfiles/darwin-configuration.nix";
+  environment.systemPackages = with pkgs; [
+    kitty
+    terminal-notifier
+  ];
 
-  programs.zsh = {
-    enable = true;
-    enableCompletion = true;
-    enableBashCompletion = true;
-    enableFzfCompletion = true;
-    enableFzfGit = true;
-    enableFzfHistory = true;
-    enableSyntaxHighlighting = true;
-  };
 
-  environment.pathsToLink = ["/share/zsh"];
+  environment.pathsToLink = ["/share/fish"];
 
   programs.tmux = import ./darwin-nix/tmux.nix;
   programs.nix-index.enable = true;
@@ -64,6 +73,7 @@ in {
   home-manager.users.oliver = {pkgs, ...}: {
     imports = [
       ./home-manager/git.nix
+      ./home-manager/fish.nix
       nixvim.homeManagerModules.nixvim
     ];
 
@@ -80,6 +90,20 @@ in {
       MANPAGER = "nvim +Man!";
       LESS = "-R";
     };
+    home.shellAliases = {
+    cls = "clear";
+    cpv = "rsync -ah --info=progress2";
+    df = "df -h";
+    egrep = "egrep --color=auto";
+    fgrep = "fgrep --color=auto";
+    grep = "grep --color=auto";
+    poweroff = "sudo shutdown -h now";
+    top = "htop";
+    vim = "nvim";
+    wget = "wget -c";
+    cd = "z";
+    tree = "ls --tree";
+  };
 
     programs.man.generateCaches = true;
     targets.darwin.search = "DuckDuckGo";
@@ -88,17 +112,16 @@ in {
     programs.direnv = import ./home-manager/direnv.nix;
     programs.fzf = import ./home-manager/fzf.nix;
     programs.ssh = import ./home-manager/ssh.nix;
-    programs.zsh = import ./home-manager/zsh.nix;
+    #programs.zsh = import ./home-manager/zsh.nix;
     programs.zoxide = import ./home-manager/zoxide.nix;
     programs.tmux = import ./home-manager/tmux.nix;
     programs.go = import ./home-manager/go.nix;
     programs.nixvim = import ./home-manager/vim.nix pkgs;
     programs.nix-index = import ./home-manager/nix-index.nix;
+    programs.kitty = import ./home-manager/kitty.nix pkgs;
 
     programs.home-manager.enable = true;
     programs.bottom.enable = true;
-    programs.lsd.enable = true;
-    programs.lsd.enableAliases = true;
     programs.htop.enable = true;
     programs.aria2.enable = true;
     programs.jq.enable = true;

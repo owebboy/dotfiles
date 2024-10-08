@@ -6,4 +6,6 @@
   mouse = true;
   newSession = true;
   keyMode = "vi";
+  sensibleOnTop = true;
+
 }

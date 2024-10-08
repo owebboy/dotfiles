@@ -20,13 +20,11 @@ with pkgs; [
   nmap
   nss_latest
   openssl
-  powershell
   python3
   rarcrack
   rclone
   rsync
   tldr
-  tree
   unrtf
   volta
   xz
