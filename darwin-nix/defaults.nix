@@ -5,7 +5,6 @@
     FXEnableExtensionChangeWarning = false;
     CreateDesktop = false;
     FXPreferredViewStyle = "clmv";
-
   };
   LaunchServices.LSQuarantine = true;
   NSGlobalDomain = {

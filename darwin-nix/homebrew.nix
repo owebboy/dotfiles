@@ -12,7 +12,6 @@
     "mongodb/brew"
     "oven-sh/bun"
     "nikitabobko/tap"
-   "felixkratz/formulae" 
   ];
 
   brews = [
@@ -40,7 +39,6 @@
     "ykman"
     "yubikey-personalization"
     "oven-sh/bun/bun"
-    "felixkratz/formulae/sketchybar"
   ];
 
   casks = [
@@ -88,8 +86,7 @@
     "tower"
     "transmit"
     "vlc"
-    #"rectangle-pro"
-    "nikitabobko/tap/aerospace"
-    
+    "rectangle-pro"
+    "notchnook"
   ];
 }

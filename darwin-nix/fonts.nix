@@ -6,6 +6,7 @@ with pkgs; [
   fira-mono
   inter
   iosevka
+  iosevka-bin
   overpass
-  (nerdfonts.override { fonts = [ "Iosevka" "IosevkaTerm" ]; })
+  (nerdfonts.override {fonts = ["Iosevka" "IosevkaTerm"];})
 ]

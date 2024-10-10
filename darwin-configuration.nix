@@ -17,11 +17,10 @@ in {
     extra-sandbox-paths = ["/System/Library/Frameworks" "/System/Library/PrivateFrameworks" "/usr/lib" "/private/tmp" "/private/var/tmp" "/usr/bin/env"];
   };
 
-  
-programs.fish.enable = true;
-environment.shells = with pkgs; [ fish ];
-users.users.oliver.shell = pkgs.fish;
-environment.loginShell = "${pkgs.fish}/bin/fish";
+  programs.fish.enable = true;
+  environment.shells = with pkgs; [fish];
+  users.users.oliver.shell = pkgs.fish;
+  environment.loginShell = "${pkgs.fish}/bin/fish";
 
   nix.optimise.automatic = true;
   nix.gc.automatic = true;
@@ -44,7 +43,6 @@ environment.loginShell = "${pkgs.fish}/bin/fish";
     kitty
     terminal-notifier
   ];
-
 
   environment.pathsToLink = ["/share/fish"];
 
@@ -89,21 +87,22 @@ environment.loginShell = "${pkgs.fish}/bin/fish";
       VOLTA_HOME = "$HOME/.volta";
       MANPAGER = "nvim +Man!";
       LESS = "-R";
+      PATH = "/opt/homebrew/bin:$PATH";
     };
     home.shellAliases = {
-    cls = "clear";
-    cpv = "rsync -ah --info=progress2";
-    df = "df -h";
-    egrep = "egrep --color=auto";
-    fgrep = "fgrep --color=auto";
-    grep = "grep --color=auto";
-    poweroff = "sudo shutdown -h now";
-    top = "htop";
-    vim = "nvim";
-    wget = "wget -c";
-    cd = "z";
-    tree = "ls --tree";
-  };
+      cls = "clear";
+      cpv = "rsync -ah --info=progress2";
+      df = "df -h";
+      egrep = "egrep --color=auto";
+      fgrep = "fgrep --color=auto";
+      grep = "grep --color=auto";
+      poweroff = "sudo shutdown -h now";
+      top = "htop";
+      vim = "nvim";
+      wget = "wget -c";
+      cd = "z";
+      tree = "ls --tree";
+    };
 
     programs.man.generateCaches = true;
     targets.darwin.search = "DuckDuckGo";
@@ -114,11 +113,12 @@ environment.loginShell = "${pkgs.fish}/bin/fish";
     programs.ssh = import ./home-manager/ssh.nix;
     #programs.zsh = import ./home-manager/zsh.nix;
     programs.zoxide = import ./home-manager/zoxide.nix;
-    programs.tmux = import ./home-manager/tmux.nix;
+    programs.tmux = import ./home-manager/tmux.nix pkgs;
     programs.go = import ./home-manager/go.nix;
     programs.nixvim = import ./home-manager/vim.nix pkgs;
     programs.nix-index = import ./home-manager/nix-index.nix;
     programs.kitty = import ./home-manager/kitty.nix pkgs;
+    programs.wezterm = import ./home-manager/wezterm.nix pkgs;
 
     programs.home-manager.enable = true;
     programs.bottom.enable = true;

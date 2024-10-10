@@ -35,5 +35,5 @@ with pkgs; [
   btop
   zlib-ng
   brotli
-  iosevka
+  fastfetch
 ]
