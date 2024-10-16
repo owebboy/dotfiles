@@ -87,7 +87,7 @@ in {
       VOLTA_HOME = "$HOME/.volta";
       MANPAGER = "nvim +Man!";
       LESS = "-R";
-      PATH = "/opt/homebrew/bin:$PATH";
+      PATH = "/opt/homebrew/bin:$VOLTA_HOME/bin:$PATH"
     };
     home.shellAliases = {
       cls = "clear";
