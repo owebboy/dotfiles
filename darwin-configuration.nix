@@ -14,7 +14,14 @@ in {
     trusted-users = ["oliver"];
     sandbox = false;
     auto-optimise-store = true;
-    extra-sandbox-paths = ["/System/Library/Frameworks" "/System/Library/PrivateFrameworks" "/usr/lib" "/private/tmp" "/private/var/tmp" "/usr/bin/env"];
+    extra-sandbox-paths = [
+      "/System/Library/Frameworks"
+      "/System/Library/PrivateFrameworks"
+      "/usr/lib"
+      "/private/tmp"
+      "/private/var/tmp"
+      "/usr/bin/env"
+    ];
   };
 
   programs.fish.enable = true;
@@ -86,8 +93,9 @@ in {
       GOPATH = "$HOME/go";
       VOLTA_HOME = "$HOME/.volta";
       MANPAGER = "nvim +Man!";
-      LESS = "-R";
-      PATH = "/opt/homebrew/bin:$VOLTA_HOME/bin:$PATH"
+      LESS = "-RF --mouse";
+      PAGER = "less";
+      PATH = "/opt/homebrew/bin:$HOME/.volta/bin:$PATH";
     };
     home.shellAliases = {
       cls = "clear";
@@ -102,6 +110,7 @@ in {
       wget = "wget -c";
       cd = "z";
       tree = "ls --tree";
+      cat = "bat";
     };
 
     programs.man.generateCaches = true;
@@ -119,6 +128,7 @@ in {
     programs.nix-index = import ./home-manager/nix-index.nix;
     programs.kitty = import ./home-manager/kitty.nix pkgs;
     programs.wezterm = import ./home-manager/wezterm.nix pkgs;
+    programs.bat = import ./home-manager/bat.nix pkgs;
 
     programs.home-manager.enable = true;
     programs.bottom.enable = true;
@@ -127,7 +137,28 @@ in {
     programs.jq.enable = true;
     programs.less.enable = true;
     programs.lesspipe.enable = true;
-    programs.bat.enable = true;
     programs.lazygit.enable = true;
+    programs.ripgrep.enable = true;
+    programs.ripgrep.arguments = [
+      "--max-columns=150"
+      "--max-columns-preview"
+
+      # Add my 'web' type.
+      "--type-add"
+      "web:*.{html,css,js}*"
+
+      # Search hidden files / directories (e.g. dotfiles) by default
+      "--hidden"
+
+      # Using glob patterns to include/exclude files or folders
+      "--glob=!.git/*"
+
+      # Set the colors.
+      "--colors=line:none"
+      "--colors=line:style:bold"
+
+      # Because who cares about case!?
+      "--smart-case"
+    ];
   };
 }
