@@ -1,5 +1,7 @@
 {
-  enable = true;
-  enableFishIntegration = true;
-  tmux.enableShellIntegration = true;
+  programs.fzf = {
+    enable = true;
+    enableFishIntegration = true;
+    tmux.enableShellIntegration = true;
+  };
 }
