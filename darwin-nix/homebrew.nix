@@ -1,5 +1,5 @@
 {
-  hombrew = {
+  homebrew = {
     enable = true;
     global.brewfile = true;
     onActivation = {

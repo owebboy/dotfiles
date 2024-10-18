@@ -6,7 +6,6 @@
   imports = [
     ./home-manager/shell.nix
     ./home-manager/packages.nix
-    nixvim.homeManagerModules.nixvim
   ];
 
   home.username = "oliver";
