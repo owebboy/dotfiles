@@ -16,6 +16,7 @@
     ./nix-index.nix
     ./kitty.nix
     ./bat.nix
+    ./git.nix
   ];
 
   home = {

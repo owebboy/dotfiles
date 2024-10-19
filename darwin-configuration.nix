@@ -14,7 +14,7 @@
 
   security.pam.enableSudoTouchIdAuth = true;
   system.stateVersion = 4;
-  environment.darwinConfig = "$HOME/.dotfiles/darwin-configuration.nix";
+  environment.darwinConfig = "$HOME/.dotfiles/flake.nix";
   environment.systemPackages = with pkgs; [
     kitty
     terminal-notifier

@@ -8,7 +8,7 @@
     enable = true;
     plugins = [
       {
-        name = "fasd";
+        name = "catppuccin";
         src = pkgs.fetchFromGitHub {
           owner = "catppuccin";
           repo = "fish";
