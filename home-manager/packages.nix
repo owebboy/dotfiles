@@ -5,6 +5,7 @@
   ...
 }: {
   home.packages = with pkgs; [
+    nixd
     alejandra
     bandwhich
     brotli

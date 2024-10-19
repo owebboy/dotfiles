@@ -14,7 +14,8 @@
 
     shellIntegration.enableFishIntegration = true;
     shellIntegration.enableBashIntegration = true;
-    themeFile = "Catppuccin-Mocha";
+    # themeFile = "Catppuccin-Mocha";
+    theme = "Catppuccin-Mocha";
 
     settings = {
       shell = "${pkgs.fish}/bin/fish";

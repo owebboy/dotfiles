@@ -15,7 +15,7 @@
     vimAlias = true;
 
     #performance.combinePlugins.enable = true;
-    performance.byteCompileLua.enable = true;
+    # performance.byteCompileLua.enable = true;
 
     extraPlugins = with pkgs.vimPlugins; [
       zoxide-vim
@@ -27,7 +27,7 @@
         # settings.colorscheme = "catppuccin";
       };
       lsp.enable = true;
-      lsp.inlayHints = true;
+      # lsp.inlayHints = true;
       lsp.servers = {
         bashls.enable = true;
         clangd.enable = true;
@@ -92,18 +92,18 @@
       lspsaga.enable = true;
 
       treesitter.enable = true;
-      treesitter.settings.highlight.enable = true;
-      treesitter.settings.indent.enable = true;
+      # treesitter.settings.highlight.enable = true;
+      # treesitter.settings.indent.enable = true;
 
       treesitter-context.enable = true;
       treesitter-context.settings.enable = true;
 
       trouble.enable = true;
       tmux-navigator.enable = true;
-      yazi.enable = true;
+      # yazi.enable = true;
       which-key.enable = true;
       mini.enable = true;
-      web-devicons.enable = true; # Enable icons (required for neo-tree and trouble)
+      # web-devicons.enable = true; # Enable icons (required for neo-tree and trouble)
       notify.enable = true;
       nvim-colorizer.enable = true;
       coq-nvim.enable = true;
