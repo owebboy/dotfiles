@@ -1,4 +1,9 @@
-pkgs: {
+{
+  pkgs,
+  lib,
+  inputs,
+  ...
+}: {
   programs.bat = {
     enable = true;
     themes = {

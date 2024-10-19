@@ -1,4 +1,9 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  lib,
+  inputs,
+  ...
+}: {
   programs.git.difftastic.enable = true;
   programs.gh = {
     enable = true;

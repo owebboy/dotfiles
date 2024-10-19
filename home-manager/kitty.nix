@@ -1,4 +1,9 @@
-pkgs: {
+{
+  pkgs,
+  lib,
+  inputs,
+  ...
+}: {
   programs.kitty = {
     enable = true;
     font = {
@@ -8,6 +13,7 @@ pkgs: {
     };
 
     shellIntegration.enableFishIntegration = true;
+    shellIntegration.enableBashIntegration = true;
     themeFile = "Catppuccin-Mocha";
 
     settings = {

@@ -1,4 +1,9 @@
-pkgs: {
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}: {
   programs.tmux = {
     enable = true;
     aggressiveResize = true;

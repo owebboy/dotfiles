@@ -1,4 +1,9 @@
-{pkgs, ...}: {
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}: {
   imports = [
     ./awscli.nix
     ./direnv.nix
