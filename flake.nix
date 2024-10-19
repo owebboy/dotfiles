@@ -21,7 +21,7 @@
   } @ inputs: let
     system = "aarch64-darwin"; # or "x86_64-darwin" if you're on Intel
   in {
-    darwinConfigurations."darwin" = nix-darwin.lib.darwinSystem {
+    darwinConfigurations."Olivers-MacBook-Air" = nix-darwin.lib.darwinSystem {
       inherit system;
       modules = [
         ./darwin-configuration.nix
