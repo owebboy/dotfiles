@@ -21,7 +21,6 @@
     lynx
     mkcert
     mpdecimal
-    nerdfonts
     nmap
     nss_latest
     openssl
