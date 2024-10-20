@@ -1,4 +1,4 @@
-pkgs: {
+{pkgs, ...}: {
   enable = true;
   extraConfig = ''
     local wezterm = require 'wezterm'

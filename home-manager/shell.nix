@@ -1,9 +1,4 @@
 {
-  config,
-  pkgs,
-  inputs,
-  ...
-}: {
   imports = [
     ./awscli.nix
     ./direnv.nix
@@ -17,6 +12,7 @@
     ./kitty.nix
     ./bat.nix
     ./git.nix
+    # ./firefox.nix
   ];
 
   home = {
