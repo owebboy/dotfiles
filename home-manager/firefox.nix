@@ -2,10 +2,10 @@
   programs.firefox = {
     enable = true;
     package = pkgs.firefox-beta-bin;
+
     profiles = {
       "oliver" = {
-        id = 999;
-        isDefault = true;
+        id = 0;
 
         search.default = "DuckDuckGo";
         search.force = true;
