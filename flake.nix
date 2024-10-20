@@ -9,8 +9,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nixpkgs-firefox-darwin.url = "github:bandithedoge/nixpkgs-firefox-darwin";
-
     nixvim = {
       url = "github:nix-community/nixvim/nixos-24.05";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -25,6 +23,8 @@
       url = "github:nix-community/fenix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixpkgs-firefox-darwin.url = "github:bandithedoge/nixpkgs-firefox-darwin";
+    nur.url = "github:nix-community/NUR";
   };
 
   outputs = {
@@ -45,6 +45,7 @@
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
           home-manager.users.oliver = import ./home.nix;
+          home-manager.backupFileExtension = "bak";
           home-manager.extraSpecialArgs = {inherit inputs;};
         }
       ];

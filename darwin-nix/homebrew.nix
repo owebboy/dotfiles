@@ -48,7 +48,6 @@
       "apparency"
       "avifquicklook"
       "element"
-      "firefox"
       "inkscape"
       "iterm2"
       "jetbrains-toolbox"

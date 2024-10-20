@@ -131,7 +131,7 @@
           noice = true;
           lsp_trouble = true;
           which_key = true;
-          fzf = true;
+          # fzf = true;
         };
         styles = {
           booleans = [

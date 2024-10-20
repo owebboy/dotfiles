@@ -7,6 +7,9 @@
       return {
         font_size = 14.0,
 
+        font = wezterm.font("IosevkaTerm Nerd Font"),
+        harfbuzz_features = { 'zero' },
+
         color_scheme = 'Catppuccin Mocha',
 
         -- Use fish as the default shell
