@@ -1,4 +1,4 @@
-{
+{inputs, ...}: {
   services.nix-daemon.enable = true;
   services.nix-daemon.enableSocketListener = true;
   nix.optimise.automatic = true;
@@ -36,5 +36,7 @@
 
   nixpkgs.overlays = [
     # Your overlays here
+    inputs.fenix.overlays.default
+    inputs.nixpkgs-firefox-darwin.overlay
   ];
 }

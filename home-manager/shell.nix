@@ -12,7 +12,8 @@
     ./kitty.nix
     ./bat.nix
     ./git.nix
-    # ./firefox.nix
+    ./firefox.nix
+    ./wezterm.nix
   ];
 
   home = {

@@ -1,9 +1,4 @@
-{
-  config,
-  pkgs,
-  inputs,
-  ...
-}: {
+{...}: {
   imports = [
     ./home-manager/shell.nix
     ./home-manager/packages.nix

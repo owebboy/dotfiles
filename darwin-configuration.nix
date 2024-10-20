@@ -1,15 +1,11 @@
-{
-  pkgs,
-  lib,
-  inputs,
-  ...
-}: {
+{pkgs, ...}: {
   imports = [
     ./darwin-nix/homebrew.nix
     ./darwin-nix/defaults.nix
     ./darwin-nix/nixSettings.nix
     ./darwin-nix/fish.nix
     ./darwin-nix/fonts.nix
+    ./darwin-nix/rust.nix
   ];
 
   security.pam.enableSudoTouchIdAuth = true;
