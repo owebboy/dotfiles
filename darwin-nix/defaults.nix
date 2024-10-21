@@ -9,6 +9,7 @@
     };
     LaunchServices.LSQuarantine = true;
     NSGlobalDomain = {
+      ApplePressAndHoldEnabled = false;
       AppleInterfaceStyle = "Dark";
       AppleFontSmoothing = 2;
       AppleScrollerPagingBehavior = true;

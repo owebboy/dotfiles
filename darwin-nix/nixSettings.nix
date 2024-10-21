@@ -7,6 +7,7 @@
     trusted-users = ["oliver"];
     sandbox = false;
     auto-optimise-store = true;
+    experimental-features = ["nix-command" "flakes"];
     trusted-substituters = [
       "https://cache.nixos.org"
       "https://nix-community.cachix.org"

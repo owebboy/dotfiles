@@ -1,11 +1,13 @@
 {
+  environment.variables.HOMEBREW_NO_ANALYTICS = "1";
+
   homebrew = {
     enable = true;
     global.brewfile = true;
     onActivation = {
-      cleanup = "uninstall";
       autoUpdate = true;
       upgrade = true;
+      cleanup = "zap";
     };
     taps = [
       "homebrew/bundle"
