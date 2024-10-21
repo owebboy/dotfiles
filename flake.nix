@@ -51,5 +51,21 @@
       ];
       specialArgs = {inherit inputs;};
     };
+
+    darwinConfigurations."Olivers-Mac-Studio" = nix-darwin.lib.darwinSystem {
+      inherit system;
+      modules = [
+        ./darwin-configuration.nix
+        home-manager.darwinModules.home-manager
+        {
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+          home-manager.users.oliver = import ./home.nix;
+          home-manager.backupFileExtension = "bak";
+          home-manager.extraSpecialArgs = {inherit inputs;};
+        }
+      ];
+      specialArgs = {inherit inputs;};
+    };
   };
 }
