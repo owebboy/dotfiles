@@ -49,7 +49,6 @@
       "avifquicklook"
       "element"
       "inkscape"
-      "iterm2"
       "jetbrains-toolbox"
       "kaleidoscope"
       "keepassxc"
