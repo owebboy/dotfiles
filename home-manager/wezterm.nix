@@ -2,12 +2,10 @@
   programs.wezterm = {
     enable = true;
     extraConfig = ''
-      local wezterm = require 'wezterm'
-
       return {
         font_size = 14.0,
 
-        font = wezterm.font("IosevkaTerm Nerd Font"),
+        font = wezterm.font("Iosevka Term"),
         harfbuzz_features = { 'zero' },
 
         color_scheme = 'Catppuccin Mocha',
