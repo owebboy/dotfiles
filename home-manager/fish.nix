@@ -1,5 +1,8 @@
 {pkgs, ...}: {
   programs.fish = {
+    interactiveShellInit = ''
+      set fish_greeting # Disable greeting
+    '';
     enable = true;
     plugins = [
       {

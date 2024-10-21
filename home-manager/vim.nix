@@ -26,6 +26,10 @@
         # settings.colorscheme = "catppuccin";
       };
       lsp.enable = true;
+      lsp-format.enable = true;
+      lsp-lines.enable = true;
+      lsp-status.enable = true;
+      lspsaga.enable = true;
       # lsp.inlayHints = true;
       lsp.servers = {
         bashls.enable = true;
@@ -87,9 +91,6 @@
       emmet.enable = true;
       nix.enable = true;
 
-      lsp-format.enable = true;
-      lspsaga.enable = true;
-
       treesitter.enable = true;
       # treesitter.settings.highlight.enable = true;
       # treesitter.settings.indent.enable = true;
@@ -105,9 +106,27 @@
       # web-devicons.enable = true; # Enable icons (required for neo-tree and trouble)
       notify.enable = true;
       nvim-colorizer.enable = true;
-      coq-nvim.enable = true;
-      coq-nvim.installArtifacts = true;
       fzf-lua.enable = true;
+      cmp = {
+        enable = true;
+        autoEnableSources = true;
+        settings.sources = [
+          {name = "nvim_lsp";}
+          {name = "path";}
+          {name = "buffer";}
+          {name = "clippy";}
+          {name = "cmdline";}
+          {name = "cmdline-history";}
+          {name = "fish";}
+          {name = "npm";}
+          {name = "nvim-lsp";}
+          {name = "nvim-lsp-document-symbol";}
+          {name = "nvim-lsp-signature-help";}
+          {name = "nvim-lua";}
+          {name = "nvim-utilsnips";}
+          {name = "nvim-treesitter";}
+        ];
+      };
     };
     opts = {
       number = true; # Show line numbers
