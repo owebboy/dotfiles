@@ -42,7 +42,7 @@
       top = "htop";
       vim = "nvim";
       wget = "wget -c";
-      cd = "z";
+      #cd = "z";
       tree = "ls --tree";
       cat = "bat";
     };

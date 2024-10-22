@@ -14,6 +14,7 @@
   environment.systemPackages = with pkgs; [
     kitty
     terminal-notifier
+    iosevka-bin
   ];
 
   # programs.tmux = import ./darwin-nix/tmux.nix;

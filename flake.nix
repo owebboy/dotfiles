@@ -25,6 +25,8 @@
     };
     nixpkgs-firefox-darwin.url = "github:bandithedoge/nixpkgs-firefox-darwin";
     nur.url = "github:nix-community/NUR";
+
+    wezterm.url = "github:wez/wezterm?dir=nix";
   };
 
   outputs = {
