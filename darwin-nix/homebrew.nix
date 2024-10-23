@@ -42,6 +42,7 @@
       "ykman"
       "yubikey-personalization"
       "oven-sh/bun/bun"
+      "python"
     ];
 
     casks = [
