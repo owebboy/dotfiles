@@ -14,6 +14,9 @@
 
   programs.home-manager.enable = true;
   programs.ruff.enable = true;
+  programs.ruff.settings = {
+    line-length = 80;
+  };
   programs.bottom.enable = true;
   programs.htop.enable = true;
   programs.aria2.enable = true;
