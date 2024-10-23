@@ -43,6 +43,7 @@
       "yubikey-personalization"
       "oven-sh/bun/bun"
       "python"
+      "pipx"
     ];
 
     casks = [
