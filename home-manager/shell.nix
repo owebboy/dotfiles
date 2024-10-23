@@ -29,7 +29,7 @@
       MANPAGER = "nvim +Man!";
       LESS = "-RF --mouse";
       PAGER = "less";
-      PATH = "/opt/homebrew/bin:$HOME/.volta/bin:$PATH";
+      PATH = "/opt/homebrew/bin:$HOME/.local/bin:$HOME/.volta/bin:$PATH";
     };
     shellAliases = {
       cls = "clear";
