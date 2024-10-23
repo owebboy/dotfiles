@@ -20,7 +20,6 @@
     nmap
     nss_latest
     openssl
-    python3
     rarcrack
     rclone
     rsync
@@ -36,5 +35,6 @@
     zlib-ng
     brotli
     fastfetch
+    uv
   ];
 }
