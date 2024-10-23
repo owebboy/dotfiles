@@ -13,6 +13,7 @@
   programs.man.generateCaches = true;
 
   programs.home-manager.enable = true;
+  programs.ruff.enable = true;
   programs.bottom.enable = true;
   programs.htop.enable = true;
   programs.aria2.enable = true;
