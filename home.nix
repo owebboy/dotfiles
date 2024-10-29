@@ -23,7 +23,6 @@
   programs.jq.enable = true;
   programs.less.enable = true;
   programs.lesspipe.enable = true;
-  programs.lazygit.enable = true;
   programs.ripgrep.enable = true;
   programs.ripgrep.arguments = [
     "--max-columns=150"
