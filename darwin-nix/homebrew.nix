@@ -89,6 +89,8 @@
       "vlc"
       "rectangle-pro"
       "notchnook"
+      "tailscale"
+      "firefox"
     ];
   };
 }
