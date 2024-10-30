@@ -36,5 +36,6 @@
     brotli
     fastfetch
     uv
+    persepolis
   ];
 }
