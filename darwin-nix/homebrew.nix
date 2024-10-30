@@ -91,6 +91,7 @@
       "notchnook"
       "tailscale"
       "firefox"
+      "firefox@nightly"
     ];
   };
 }
