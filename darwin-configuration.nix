@@ -12,8 +12,8 @@
   system.stateVersion = 4;
   environment.darwinConfig = "$HOME/.dotfiles/flake.nix";
   environment.systemPackages = with pkgs; [
-    kitty
-    terminal-notifier
+    #kitty
+    #terminal-notifier
     iosevka-bin
   ];
 

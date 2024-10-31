@@ -8,10 +8,13 @@
     newSession = true;
     keyMode = "emacs";
     sensibleOnTop = true;
-    disableConfirmationPrompt = true;
     shell = "${pkgs.fish}/bin/fish";
+    baseIndex = 1;
+    historyLimit = 102400;
+    escapeTime = 10;
+    prefix = "C-a";
     plugins = with pkgs; [
-            #tmuxPlugins.yank
+      #tmuxPlugins.yank
       tmuxPlugins.fpp
       tmuxPlugins.tmux-fzf
       tmuxPlugins.vim-tmux-navigator
@@ -34,8 +37,7 @@
         '';
       }
 
-tmuxPlugins.cpu
-
+      tmuxPlugins.cpu
     ];
 
     extraConfig = ''
