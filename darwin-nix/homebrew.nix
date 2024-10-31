@@ -61,7 +61,7 @@
       "microsoft-auto-update"
       "microsoft-excel"
       "microsoft-outlook"
-      "microsoft-remote-desktop"
+      "windows-app"
       "microsoft-teams"
       "microsoft-word"
       "mongodb-compass"
