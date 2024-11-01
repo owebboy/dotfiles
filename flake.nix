@@ -23,10 +23,10 @@
       url = "github:nix-community/fenix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixpkgs-firefox-darwin.url = "github:bandithedoge/nixpkgs-firefox-darwin";
+    #nixpkgs-firefox-darwin.url = "github:bandithedoge/nixpkgs-firefox-darwin";
     nur.url = "github:nix-community/NUR";
 
-    wezterm.url = "github:wez/wezterm?dir=nix";
+    #wezterm.url = "github:wez/wezterm?dir=nix";
   };
 
   outputs = {

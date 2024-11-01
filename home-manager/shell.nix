@@ -9,11 +9,12 @@
     ./go.nix
     ./vim.nix
     ./nix-index.nix
-    ./kitty.nix
+    #    ./kitty.nix
     ./bat.nix
     ./git.nix
-#    ./firefox.nix
-    ./wezterm.nix
+    #    ./firefox.nix
+    #    ./wezterm.nix
+    ./alacritty.nix
     ./fish.nix
   ];
 

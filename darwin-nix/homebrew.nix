@@ -51,6 +51,7 @@
       "1password-cli"
       "apparency"
       "avifquicklook"
+      "claude"
       "element"
       "inkscape"
       "jetbrains-toolbox"
