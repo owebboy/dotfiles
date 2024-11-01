@@ -40,6 +40,8 @@
     enable = true;
     settings = {
       os.editPreset = "nvim";
+      quitOnTopLevelReturn = true;
+      notARepository = "quit";
       gui.theme = {
         activeBorderColor = ["#89b4fa" "bold"];
         inactiveBorderColor = ["#a6adc8"];
