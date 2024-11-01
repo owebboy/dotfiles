@@ -8,16 +8,23 @@
           owner = "catppuccin";
           repo = "alacritty";
           rev = "f6cb5a5c2b404cdaceaff193b9c52317f62c62f7";
-          sha256 = "0000000000000000000000000000000000000000000000000000";
+          sha256 = "H8bouVCS46h0DgQ+oYY8JitahQDj0V9p2cOoD4cQX+Q=";
         }
         + "/catppuccin-mocha.toml"
       ));
     in {
+      env.TERM = "xterm-256color";
       # The rest of your settings
       window = {
-        decorations = "Transparent";
+        decorations = "buttonless";
+        startup_mode = "Windowed";
         opacity = 0.9;
         blur = true;
+        option_as_alt = "Both";
+        padding = {
+          x = 12;
+          y = 12;
+        };
       };
       font = {
         size = 14.00;
