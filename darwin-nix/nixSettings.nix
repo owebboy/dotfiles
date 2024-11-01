@@ -40,7 +40,7 @@
   nixpkgs.overlays = [
     # Your overlays here
     inputs.fenix.overlays.default
-    inputs.nixpkgs-firefox-darwin.overlay
+    #inputs.nixpkgs-firefox-darwin.overlay
     inputs.nur.overlay
   ];
 }
