@@ -14,11 +14,12 @@
       ));
     in {
       env.TERM = "xterm-256color";
+      shell = "${pkgs.fish}/bin/fish";
       # The rest of your settings
       window = {
         decorations = "Buttonless";
         startup_mode = "Windowed";
-        opacity = 0.67;
+        opacity = 0.80;
         blur = true;
         option_as_alt = "Both";
         padding = {
