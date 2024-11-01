@@ -16,18 +16,19 @@
       env.TERM = "xterm-256color";
       # The rest of your settings
       window = {
-        decorations = "buttonless";
+        decorations = "Buttonless";
         startup_mode = "Windowed";
-        opacity = 0.9;
+        opacity = 0.67;
         blur = true;
         option_as_alt = "Both";
         padding = {
           x = 12;
-          y = 12;
+          y = 6;
         };
+        dynamic_padding = true;
       };
       font = {
-        size = 14.00;
+        size = 16.00;
         normal.family = "IosevkaTerm NF";
       };
       # Theme colors added at same level as other top-level settings
