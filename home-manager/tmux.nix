@@ -13,11 +13,58 @@
     historyLimit = 102400;
     escapeTime = 10;
     prefix = "C-a";
+    extraConfig = ''
+    set -ag terminal-overrides ',xterm-256color*:RGB'
+    
+    set -g @catppuccin_flavor "mocha"
+    set -g @catppuccin_window_status_style "rounded"
+
+    
+    set -g @catppuccin_window_default_text '#W'
+    set -g @catppuccin_window_current_text '#W'
+    set -g status-interval 5
+    set -g status-left-length 100
+    set -g status-right-length 100
+    set -g status-left '#{E:@catppuccin_status_session} '
+
+    set -g renumber-windows on
+          
+    # Use emacs keybindings in the status line
+    set-option -g status-keys emacs
+
+    # Use vim keybindings in copy mode
+    setw -g mode-keys vi
+
+    # Copy mode
+    unbind-key -T copy-mode-vi v
+
+    bind-key -T copy-mode-vi v \
+      send-keys -X begin-selection
+
+    bind-key -T copy-mode-vi 'C-v' \
+      send-keys -X rectangle-toggle
+
+    bind-key -T copy-mode-vi y \
+      send-keys -X copy-pipe-and-cancel "pbcopy"
+
+    bind-key -T copy-mode-vi MouseDragEnd1Pane \
+      send-keys -X copy-pipe-and-cancel "pbcopy"
+
+    bind '\' split-window -h -c '#{pane_current_path}'
+    bind - split-window -v -c '#{pane_current_path}'
+    '';
     plugins = with pkgs; [
       #tmuxPlugins.yank
       tmuxPlugins.fpp
       tmuxPlugins.tmux-fzf
-      tmuxPlugins.vim-tmux-navigator
+      {
+        plugin = tmuxPlugins.vim-tmux-navigator;
+        extraConfig = ''
+nnoremap <C-J> <C-W>j
+nnoremap <C-K> <C-W>k
+nnoremap <C-H> <C-W>h
+nnoremap <C-L> <C-W>l
+        '';
       {
         plugin = tmuxPlugins.resurrect;
         extraConfig = "set -g @resurrect-strategy-nvim 'session'";
@@ -34,6 +81,7 @@
         extraConfig = ''
           set -g @catppuccin_flavor "mocha"
           set -g @catppuccin_window_status_style "rounded"
+
         '';
       }
 
