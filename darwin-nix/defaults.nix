@@ -25,6 +25,9 @@
     SoftwareUpdate.AutomaticallyInstallMacOSUpdates = true;
     dock = {
       show-recents = false;
+      autohide = false;
+      autohide-delay = 0;
+      autohide-time-modifier = 0;
     };
 
     #loginWindow.GuestEnabled = false;
