@@ -26,8 +26,8 @@
     dock = {
       show-recents = false;
       autohide = false;
-      autohide-delay = 0;
-      autohide-time-modifier = 0;
+      autohide-delay = 0.00;
+      autohide-time-modifier = 0.00;
     };
 
     #loginWindow.GuestEnabled = false;
