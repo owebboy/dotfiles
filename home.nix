@@ -1,14 +1,26 @@
-{...}: {
+{ inputs
+, pkgs
+, ...
+}: {
   imports = [
     ./home-manager/shell.nix
     ./home-manager/packages.nix
+    ./home-manager/xdg.nix
+    ./nixos/system/hyprland/hyprland.nix
   ];
 
   home.username = "oliver";
-  home.homeDirectory = "/Users/oliver";
+  home.homeDirectory = "/home/oliver";
   home.stateVersion = "23.11";
+  home.pointerCursor = {
+    gtk.enable = true;
+    package = pkgs.vanilla-dmz;
+    name = "Vanilla-DMZ";
+  };
 
-  targets.darwin.search = "DuckDuckGo";
+  colorScheme = inputs.nix-colors.colorSchemes.catppuccin-mocha;
+
+  #targets.darwin.search = "DuckDuckGo";
 
   programs.man.generateCaches = true;
 
