@@ -75,8 +75,8 @@
       nixosConfigurations."Olivers-NixOS-Laptop" = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs; };
         modules = [
-          /etc/nixos/configuration.nix
-          /etc/nixos/hardware-configuration.nix
+          ./configuration.nix
+        ./hardware-configuration.nix
           ./nixos/system
           home-manager.nixosModules.home-manager
           {
