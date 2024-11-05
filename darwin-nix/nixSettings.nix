@@ -1,9 +1,10 @@
-{inputs, ...}: {
+{inputs, pkgs, ...}: {
   services.nix-daemon.enable = true;
-  services.nix-daemon.enableSocketListener = true;
+  #services.nix-daemon.enableSocketListener = true;
   programs.nix-index.enable = true;
-  nix.optimise.automatic = true;
+  #nix.optimise.automatic = true;
   nix.gc.automatic = true;
+  nix.package = pkgs.nixVersions.git;
   nix.settings = {
     trusted-users = ["oliver"];
     sandbox = false;
