@@ -30,12 +30,10 @@
   outputs = {
     nix-darwin,
     home-manager,
-    fenix,
     ...
   } @ inputs: let
     system = "aarch64-darwin"; # or "x86_64-darwin" if you're on Intel
   in {
-    packages.${system}.default = fenix.packages.${system}.minimal.toolchain;
     darwinConfigurations."Olivers-MacBook-Air" = nix-darwin.lib.darwinSystem {
       inherit system;
       modules = [
