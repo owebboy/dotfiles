@@ -93,6 +93,7 @@
       "tailscale"
       "firefox"
       "firefox@nightly"
+      "discord"
     ];
   };
 }
