@@ -1,9 +1,21 @@
-{inputs, pkgs, ...}: {
+{
+  inputs,
+  pkgs,
+  ...
+}: {
   services.nix-daemon.enable = true;
   #services.nix-daemon.enableSocketListener = true;
   programs.nix-index.enable = true;
   #nix.optimise.automatic = true;
-  nix.gc.automatic = true;
+  nix.gc = {
+    automatic = true;
+    interval = {
+      Weekday = 0;
+      Hour = 0;
+      Minute = 0;
+    };
+    options = "--delete-older-than 30d";
+  };
   nix.package = pkgs.nixVersions.git;
   nix.settings = {
     trusted-users = ["oliver"];
