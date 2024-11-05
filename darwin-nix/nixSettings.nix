@@ -1,6 +1,7 @@
 {inputs, ...}: {
   services.nix-daemon.enable = true;
   services.nix-daemon.enableSocketListener = true;
+  programs.nix-index.enable = true;
   nix.optimise.automatic = true;
   nix.gc.automatic = true;
   nix.settings = {
@@ -39,8 +40,7 @@
 
   nixpkgs.overlays = [
     # Your overlays here
-    inputs.fenix.overlays.default
-    #inputs.nixpkgs-firefox-darwin.overlay
+    inputs.rust-overlay.overlays.default
     inputs.nur.overlay
   ];
 }

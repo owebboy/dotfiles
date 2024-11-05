@@ -19,14 +19,12 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    fenix = {
-      url = "github:nix-community/fenix";
+    rust-overlay = {
+      url = "github:oxalica/rust-overlay";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    #nixpkgs-firefox-darwin.url = "github:bandithedoge/nixpkgs-firefox-darwin";
-    nur.url = "github:nix-community/NUR";
 
-    #wezterm.url = "github:wez/wezterm?dir=nix";
+    nur.url = "github:nix-community/NUR";
   };
 
   outputs = {

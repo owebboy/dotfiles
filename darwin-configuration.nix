@@ -12,13 +12,10 @@
   system.stateVersion = 4;
   environment.darwinConfig = "$HOME/.dotfiles/flake.nix";
   environment.systemPackages = with pkgs; [
-    #kitty
-    #terminal-notifier
+    alacritty
+    terminal-notifier
     iosevka-bin
   ];
-
-  # programs.tmux = import ./darwin-nix/tmux.nix;
-  programs.nix-index.enable = true;
 
   users.users.oliver = {
     name = "oliver";
