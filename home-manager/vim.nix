@@ -21,7 +21,7 @@
       fzfWrapper
     ];
     plugins = {
-      oil.enable = true;
+      #oil.enable = true;
       lightline = {
         enable = true;
         # settings.colorscheme = "catppuccin";

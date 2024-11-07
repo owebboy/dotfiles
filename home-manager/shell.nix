@@ -1,4 +1,4 @@
-{
+{pkgs, ...}: {
   imports = [
     ./awscli.nix
     ./direnv.nix
@@ -43,6 +43,7 @@
       #cd = "z";
       tree = "ls --tree";
       cat = "bat";
+      gtar = "${pkgs.gnutar}/bin/tar";
     };
   };
 }
