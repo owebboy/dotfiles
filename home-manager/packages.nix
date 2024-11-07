@@ -38,5 +38,8 @@
     uv
     persepolis
     yt-dlp
+    zstd
+    gnutar
+    gnunet
   ];
 }
