@@ -21,6 +21,7 @@
       fzfWrapper
     ];
     plugins = {
+      oil.enable = true;
       lightline = {
         enable = true;
         # settings.colorscheme = "catppuccin";
@@ -107,6 +108,7 @@
       notify.enable = true;
       nvim-colorizer.enable = true;
       fzf-lua.enable = true;
+      telecope.enable = true;
       cmp = {
         enable = true;
         autoEnableSources = true;
@@ -150,6 +152,7 @@
           noice = true;
           lsp_trouble = true;
           which_key = true;
+          telescope = true;
           # fzf = true;
         };
         styles = {
