@@ -108,7 +108,7 @@
       notify.enable = true;
       nvim-colorizer.enable = true;
       fzf-lua.enable = true;
-      telecope.enable = true;
+      telescope.enable = true;
       cmp = {
         enable = true;
         autoEnableSources = true;
