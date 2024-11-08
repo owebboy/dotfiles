@@ -110,7 +110,7 @@
       fzf-lua.enable = true;
       telescope.enable = true;
       cmp = {
-        enable = true;
+        enable = false;
         autoEnableSources = true;
         settings.sources = [
           {name = "nvim_lsp";}
