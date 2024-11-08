@@ -55,6 +55,8 @@
     # Your overlays here
     inputs.rust-overlay.overlays.default
     inputs.nur.overlay
-    inputs.nvchad4nix.packages."${pkgs.system}".nvchad
+    (final: prev: {
+      nvchad = inputs.nvchad4nix.packages."${pkgs.system}".nvchad;
+    })
   ];
 }
