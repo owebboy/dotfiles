@@ -1,13 +1,13 @@
 {pkgs, ...}: {
   programs.fish = {
     interactiveShellInit = ''
-    set fish_greeting # Disable greeting
-    # restart with tmux if not already in tmux session
-          if type -q tmux
-          if not test -n "$TMUX"
-              tmux attach-session -t default; or tmux new-session -s default
-          end
-      end
+      set fish_greeting # Disable greeting
+      # restart with tmux if not already in tmux session
+            if type -q tmux
+            if not test -n "$TMUX"
+                tmux attach-session -t default; or tmux new-session -s default
+            end
+        end
 
     '';
     enable = true;
@@ -28,7 +28,7 @@
     enable = true;
     enableFishIntegration = true;
     git = true;
-    icons = true;
+    icons = "auto";
   };
 
   programs.starship = {
