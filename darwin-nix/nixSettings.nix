@@ -6,7 +6,7 @@
   services.nix-daemon.enable = true;
   #services.nix-daemon.enableSocketListener = true;
   programs.nix-index.enable = true;
-  #nix.optimise.automatic = true;
+  nix.optimise.automatic = true;
   nix.gc = {
     automatic = true;
     interval = {
@@ -20,7 +20,7 @@
   nix.settings = {
     trusted-users = ["oliver"];
     sandbox = false;
-    auto-optimise-store = true;
+    #auto-optimise-store = true;
     experimental-features = ["nix-command" "flakes"];
     trusted-substituters = [
       "https://cache.nixos.org"
