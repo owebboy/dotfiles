@@ -8,6 +8,9 @@
     inputs.nvchad4nix.homeManagerModule
   ];
   programs.nvchad = {
+    extraConfig = ''
+    require('base46').toggle_transparency()
+    '';
     enable = true;
     extraPackages = with pkgs; [
       nodePackages.bash-language-server
