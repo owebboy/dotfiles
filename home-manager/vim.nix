@@ -10,6 +10,8 @@
   programs.nvchad = {
     extraConfig = ''
     require('base46').toggle_transparency()
+    require("nvconfig").base46.theme = 'catppuccin'
+    require("base46").load_all_highlights()
     '';
     enable = true;
     extraPackages = with pkgs; [
