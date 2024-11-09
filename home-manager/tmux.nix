@@ -8,7 +8,6 @@
     newSession = true;
     keyMode = "emacs";
     sensibleOnTop = true;
-    shell = "/etc/profiles/per-user/oliver/bin/fish";
     baseIndex = 1;
     historyLimit = 102400;
     escapeTime = 10;
