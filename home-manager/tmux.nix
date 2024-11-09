@@ -8,7 +8,7 @@
     newSession = true;
     keyMode = "emacs";
     sensibleOnTop = true;
-    shell = "${pkgs.fish}/bin/fish";
+    shell = "fish";
     baseIndex = 1;
     historyLimit = 102400;
     escapeTime = 10;
