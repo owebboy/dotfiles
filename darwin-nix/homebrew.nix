@@ -94,6 +94,7 @@
       "firefox"
       "firefox@nightly"
       "discord"
+      "tidal"
     ];
   };
 }
