@@ -15,6 +15,7 @@
     prefix = "C-a";
     extraConfig = ''
       set -ag terminal-overrides ',xterm-256color*:RGB'
+      set -g default-shell fish
 
       set -g @catppuccin_flavor "mocha"
       set -g @catppuccin_window_status_style "rounded"
