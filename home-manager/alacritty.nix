@@ -19,7 +19,7 @@
       window = {
         decorations = "Buttonless";
         startup_mode = "Windowed";
-        opacity = 0.80;
+        opacity = 0.95;
         blur = true;
         option_as_alt = "Both";
         padding = {
