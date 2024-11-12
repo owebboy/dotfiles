@@ -45,4 +45,9 @@
     # Because who cares about case!?
     "--smart-case"
   ];
+
+  programs.gpg = {
+    enable = true;
+
+  }
 }
