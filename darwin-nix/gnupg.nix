@@ -1,4 +1,6 @@
 {
-  enable = true;
-  enableSSHSupport = true;
+  programs.gnupg = {
+    enable = true;
+    enableSSHSupport = true;
+  };
 }
