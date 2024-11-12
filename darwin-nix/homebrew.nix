@@ -95,6 +95,7 @@
       "firefox@nightly"
       "discord"
       "tidal"
+      "proton-mail"
     ];
   };
 }
