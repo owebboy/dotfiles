@@ -10,7 +10,7 @@
     sensibleOnTop = true;
     baseIndex = 1;
     historyLimit = 102400;
-    shell = "\${pkgs.fish}/bin/fish";
+    shell = "${pkgs.fish}/bin/fish";
     escapeTime = 10;
     prefix = "C-a";
     extraConfig = ''
