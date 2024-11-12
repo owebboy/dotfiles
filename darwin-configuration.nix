@@ -6,7 +6,8 @@
     ./darwin-nix/fish.nix
     ./darwin-nix/fonts.nix
     ./darwin-nix/rust.nix
-  ];
+    ./darwin-nix/gnupg.nix
+];
 
   security.pam.enableSudoTouchIdAuth = true;
   system.stateVersion = 4;
