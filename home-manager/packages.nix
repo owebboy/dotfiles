@@ -41,5 +41,6 @@
     zstd
     gnutar
     gnunet
+    mactop
   ];
 }
