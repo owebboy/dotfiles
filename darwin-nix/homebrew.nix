@@ -96,6 +96,8 @@
       "discord"
       "tidal"
       "proton-mail"
+      "yubico-authenticator"
+      "yubico-yubikey-manager"
     ];
   };
 }

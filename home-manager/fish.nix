@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   programs.fish = {
-    interactiveShellInit = ''
+    generateCompletions = true;
+    shellInitLast = ''
       set fish_greeting # Disable greeting
       # restart with tmux if not already in tmux session
             if type -q tmux
