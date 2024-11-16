@@ -50,6 +50,8 @@
 
       bind '\' split-window -h -c '#{pane_current_path}'
       bind - split-window -v -c '#{pane_current_path}'
+
+      set-option -g default-shell $SHELL
     '';
     plugins = with pkgs; [
       #tmuxPlugins.yank
