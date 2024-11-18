@@ -46,6 +46,7 @@
     "--smart-case"
   ];
 
-  programs.gpg.enable = true;
+  # GPG bad: https://soatok.blog/2024/11/15/what-to-use-instead-of-pgp/
+  #programs.gpg.enable = true;
 
 }

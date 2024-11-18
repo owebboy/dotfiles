@@ -4,7 +4,7 @@
     shellInitLast = ''
       set fish_greeting # Disable greeting
       # restart with tmux if not already in tmux session
-            if type -q tmux
+      if type -q tmux
             if not test -n "$TMUX"
                 tmux attach-session -t default; or tmux new-session -s default
             end

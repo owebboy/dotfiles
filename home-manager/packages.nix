@@ -42,5 +42,12 @@
     gnutar
     gnunet
     mactop
+    rage
+    age-plugin-yubikey
+    passage
+    cosign
+    magic-wormhole
+    tarsnap
+    libsodium
   ];
 }

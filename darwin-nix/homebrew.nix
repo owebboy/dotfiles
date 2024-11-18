@@ -46,13 +46,18 @@
       "pipx"
     ];
 
+    caskArgs = {
+      require_sha = true;
+
+      
+    };
+
     casks = [
       "1password"
       "1password-cli"
       "apparency"
       "avifquicklook"
       "claude"
-      "element"
       "inkscape"
       "jetbrains-toolbox"
       "kaleidoscope"
@@ -92,7 +97,7 @@
       "notchnook"
       "tailscale"
       "firefox"
-      "firefox@nightly"
+      {name = "firefox@nightly"; greedy=true;}
       "discord"
       "tidal"
       "proton-mail"

@@ -10,6 +10,7 @@
 ];
 
   security.pam.enableSudoTouchIdAuth = true;
+  security.pki.certificateFiles = [ "${pkgs.cacert}/etc/ssl/certs/ca-bundle.crt" ];
   system.stateVersion = 4;
   environment.darwinConfig = "$HOME/.dotfiles/flake.nix";
   environment.systemPackages = with pkgs; [
