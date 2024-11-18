@@ -51,7 +51,8 @@
       bind '\' split-window -h -c '#{pane_current_path}'
       bind - split-window -v -c '#{pane_current_path}'
 
-      set-option -g default-shell ${pkgs.fish}/bin/fish
+      set -g default-shell /etc/profiles/per-user/oliver/bin/fish
+      set -g default-command /etc/profiles/per-user/oliver/bin/fish
     '';
     plugins = with pkgs; [
       #tmuxPlugins.yank
