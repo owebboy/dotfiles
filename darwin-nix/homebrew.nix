@@ -103,6 +103,7 @@
       "proton-mail"
       "yubico-authenticator"
       "yubico-yubikey-manager"
+      "obsidian"
     ];
   };
 }
